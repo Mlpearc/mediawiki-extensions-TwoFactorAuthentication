@@ -70,3 +70,32 @@ $messages['qqq'] = array(
 	'twofactorauth-scratchwarning-link' => 'Text for the link to Special:TwoFactorAuth when warning the user about backup tokens',
 	'twofactorauth-scratchwarning-text' => 'Text for a warning when a user is running out of backup tokens to use.'
 );
+
+/** German (Deutsch)
+ * @author Kghbln
+ * @author Metalhead64
+ */
+$messages['de'] = array(
+	'twofactorauth-desc' => 'Ermöglicht die Authentifizierung mit HMAC-gestützten Einmalpasswörtern',
+	'twofactorauth' => 'Zwei-Faktor-Authentifizierung',
+	'twofactorauth-text' => 'Dies ermöglicht dir die Aktivierung oder Deaktivierung der Zwei-Faktor-Authentifizierung. Falls du die Zwei-Faktor-Authentifizierung aktivierst, scanne den unten angegebenen QR-Code in dein Gerät oder gib das Geheimnis manuell ein. Dann gib das Token zur Verifizierung in das Feld ein. Falls du die Zwei-Faktor-Authentifizierung deaktivierst, gib den Token zur Verifizierung und Deaktivierung in das Feld ein.',
+	'twofactorauth-legend' => 'Zwei-Faktor-Authentifizierung',
+	'twofactorauth-account' => 'Zwei-Faktor-Kontenname:',
+	'twofactorauth-secret' => 'Zwei-Faktor-Geheimschlüssel:',
+	'twofactorauth-title-enable' => 'Die Zwei-Faktor-Authentifizierung aktivieren',
+	'twofactorauth-title-disable' => 'Die Zwei-Faktor-Authentifizierung deaktivieren',
+	'twofactorauth-title-reset' => 'Die Zwei-Faktor-Authentifizierung zurücksetzen',
+	'twofactorauth-enabledisable' => 'Die Zwei-Faktor-Authentifizierung aktivieren/deaktivieren',
+	'twofactorauth-token' => 'Token',
+	'twofactorauth-qrcode' => 'QR-Code-Geheimnis',
+	'twofactorauth-scratch' => 'Sicherungstoken',
+	'twofactorauth-authfailed' => 'Die Zwei-Faktor-Anmeldeinformationen konnten nicht bestätigt werden.',
+	'twofactorauth-success-enable' => 'Zwei-Schritte-Überprüfung wurde erfolgreich aktiviert.',
+	'twofactorauth-success-disable' => 'Zwei-Schritte-Überprüfung wurde erfolgreich deaktiviert.',
+	'twofactoruath-enable' => 'Aktivieren',
+	'twofactorauth-disable' => 'Deaktivieren',
+	'twofactorauth-resetscratchtokens' => 'Sicherungstoken zurücksetzen',
+	'twofactorauth-scratchwarning-link' => 'Setze deine Sicherungstoken zurück',
+	'twofactorauth-scratchwarning-text' => '<b>Achtung!</b> Deine Sicherungstoken für die Zwei-Faktor-Authentifizierung gehen zu Neige. Es wird $1 empfohlen.',
+);
+
