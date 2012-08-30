@@ -43,6 +43,7 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Darth Kule
  * @author Nemo bis
  * @author Ryan Lane <rlane@wikimedia.org>
  * @author Tyler Romeo <tylerromeo@gmail.com>
@@ -66,9 +67,16 @@ $messages['qqq'] = array(
 	'twofactorauth-success-disable' => 'Success message after disabling two-factor authentication.',
 	'twofactorauth-disable' => 'Label for submit button to disable two-factor auth',
 	'twofactorauth-resetscratchtokens' => 'Label for submit button to reset scratch tokens',
-	'twofactorauth-scratchwarning-link' => 'Text for the link to Special:TwoFactorAuth when warning the user about backup tokens',
+	'twofactorauth-scratchwarning-link' => 'Text for the link to Special:TwoFactorAuth when warning the user about backup tokens. It is used as parameter $1 in {{msg-mw|Twofactorauth-scratchwarning-text}}.',
 	'twofactorauth-scratchwarning-text' => 'This message is a warning and the first parameter is the link to the special page.
 * <code>$1</code>: defined as {{msg-mw|twofactorauth-scratchwarning-link}}',
+);
+
+/** Arabic (العربية)
+ * @author Mutarjem horr
+ */
+$messages['ar'] = array(
+	'twofactorauth-disable' => 'عطّل',
 );
 
 /** German (Deutsch)
@@ -108,6 +116,33 @@ $messages['de-formal'] = array(
 	'twofactorauth-scratchwarning-text' => '<b>Achtung!</b> Ihre Sicherungstoken für die Zwei-Faktor-Authentifizierung gehen zu Neige. Es wird $1 empfohlen.',
 );
 
+/** Spanish (español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'twofactorauth-desc' => 'Proporciona soporte de autenticación utilizando contraseñas de una sola vez basadas en HMAC',
+	'twofactorauth' => 'Autenticación de dos factores',
+	'twofactorauth-text' => 'Esto te permite activar o desactivar la autenticación de dos factores. Si vas a activar la autenticación de dos factores, escanea el código QR de más abajo (o introduce manualmente el número secreto) en tu dispositivo. Luego introduce una clave en el campo para verificación. Si vas a desactivar la autenticación de dos factores, introduce una clave en el campo para verificación y desactivación.',
+	'twofactorauth-legend' => 'Autenticación de dos factores',
+	'twofactorauth-account' => 'Nombre de la cuenta de dos factores:',
+	'twofactorauth-secret' => 'Clave secreta de dos factores:',
+	'twofactorauth-title-enable' => 'Activar la autenticación de dos factores',
+	'twofactorauth-title-disable' => 'Desactivar la autenticación de dos factores',
+	'twofactorauth-title-reset' => 'Restablecer la autenticación de dos factores',
+	'twofactorauth-enabledisable' => 'Activar/Desactivar la autenticación de dos factores',
+	'twofactorauth-token' => 'Clave',
+	'twofactorauth-qrcode' => 'Código QR secreto',
+	'twofactorauth-scratch' => 'Claves de respaldo',
+	'twofactorauth-authfailed' => 'Error al validar las credenciales de dos factores',
+	'twofactorauth-success-enable' => 'La verificación de dos pasos se ha activado correctamente.',
+	'twofactorauth-success-disable' => 'La verificación de dos pasos se ha desactivado correctamente.',
+	'twofactoruath-enable' => 'Activar',
+	'twofactorauth-disable' => 'Desactivar',
+	'twofactorauth-resetscratchtokens' => 'Restablecer las claves de respaldo',
+	'twofactorauth-scratchwarning-link' => 'restablecer tus claves de respaldo',
+	'twofactorauth-scratchwarning-text' => '<b>¡Atención!</b> El número de claves de respaldo que tienes para autenticación de dos factores se está agotando. Es recomendable que $1 pronto.',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
@@ -135,6 +170,33 @@ $messages['hsb'] = array(
 	'twofactorauth-scratchwarning-text' => '<b>Warnowanje!</b> Ličba zawěsćenskich tokenow, kotrež maš za dwufaktorowe awtentifikaciju dźe na kónc. Poruča so, zo bórze $1.',
 );
 
+/** Italian (italiano)
+ * @author Darth Kule
+ */
+$messages['it'] = array(
+	'twofactorauth-desc' => "Fornisce supporto per l'autenticazione utilizzando password a uso singolo basate su HMAC",
+	'twofactorauth' => 'Autenticazione a due fattori',
+	'twofactorauth-text' => "Questo consente di abilitare o disabilitare l'autenticazione a due fattori. Se si desidera abilitare l'autenticazione a due fattori, effettuare la scansione del codice QR seguente con il proprio dispositivo o inserire il codice segreto manualmente. Quindi immettere un token nel campo per la verifica. Se si desidera disabilitare l'autenticazione a due fattori, immettere un token nel campo per la verifica e disabilitare.",
+	'twofactorauth-legend' => 'Autenticazione a due fattori',
+	'twofactorauth-account' => "Nome dell'account per l'autenticazione a due fattori:",
+	'twofactorauth-secret' => "Chiave segreta per l'autenticazione a due fattori:",
+	'twofactorauth-title-enable' => 'Abilita autenticazione a due fattori',
+	'twofactorauth-title-disable' => 'Disabilita autenticazione a due fattori',
+	'twofactorauth-title-reset' => "Reimpostare l'autenticazione a due fattori",
+	'twofactorauth-enabledisable' => "Abilita/disabilita l'autenticazione a due fattori",
+	'twofactorauth-token' => 'Token',
+	'twofactorauth-qrcode' => 'Codice QR segreto',
+	'twofactorauth-scratch' => 'Token di backup',
+	'twofactorauth-authfailed' => 'Impossibile convalidare le credenziali a due fattori',
+	'twofactorauth-success-enable' => 'Verifica in due passaggi correttamente abilitata.',
+	'twofactorauth-success-disable' => 'Verifica in due passaggi correttamente disabilitata.',
+	'twofactoruath-enable' => 'Abilita',
+	'twofactorauth-disable' => 'Disabilita',
+	'twofactorauth-resetscratchtokens' => 'Ripristino token di backup',
+	'twofactorauth-scratchwarning-link' => 'ripristinare i propri token di backup',
+	'twofactorauth-scratchwarning-text' => "<b>Attenzione:</b> il numero di token di backup per l'autenticazione a due fattori è in esaurimento. Si consiglia di $1 al più presto.",
+);
+
 /** Japanese (日本語)
  * @author Shirayuki
  */
@@ -149,6 +211,7 @@ $messages['ja'] = array(
 	'twofactorauth-title-reset' => '二要素認証のリセット',
 	'twofactorauth-enabledisable' => '二要素認証を有効化/無効化',
 	'twofactorauth-token' => 'トークン',
+	'twofactorauth-qrcode' => 'QR コード シークレット',
 	'twofactorauth-scratch' => 'バックアップ トークン',
 	'twofactorauth-authfailed' => '二要素信用情報の検証に失敗しました。',
 	'twofactorauth-success-enable' => '二段階検証を有効にしました。',
@@ -157,7 +220,7 @@ $messages['ja'] = array(
 	'twofactorauth-disable' => '無効',
 	'twofactorauth-resetscratchtokens' => 'バックアップ トークンをリセット',
 	'twofactorauth-scratchwarning-link' => '自分のバックアップ トークンをリセット',
-	'twofactorauth-scratchwarning-text' => '<b>警告!</b> 二要素認証のバックアップ トークン数が不足しています。すぐにこちらを使用することをお勧めします: $1',
+	'twofactorauth-scratchwarning-text' => '<b>警告!</b> 二要素認証のバックアップ トークン数が不足しています。すぐに$1することをお勧めします。',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
