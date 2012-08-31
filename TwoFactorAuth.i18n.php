@@ -79,6 +79,17 @@ $messages['ar'] = array(
 	'twofactorauth-disable' => 'عطّل',
 );
 
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'twofactorauth-desc' => 'Прапануе падтрымку аўтэнтыфікацыі з выкарыстаньнем аднаразовых пароляў на аснове HMAC',
+	'twofactorauth' => 'Двухфактарная аўтэнтыфікацыя',
+	'twofactorauth-token' => 'Токен',
+	'twofactoruath-enable' => 'Уключыць',
+	'twofactorauth-disable' => 'Выключыць',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  * @author Metalhead64
@@ -264,6 +275,7 @@ $messages['mk'] = array(
 $messages['nl'] = array(
 	'twofactorauth-desc' => 'Biedt ondersteuning voor authenticatie via op HMAC-gebaseerde eenmalige wachtwoorden',
 	'twofactorauth' => 'Twee-factor authenticatie',
+	'twofactorauth-text' => 'Dit maakt het mogelijk om twee-factorauthenticatie in of uit te schakelen. Als u twee-factorauthenticatie inschakelt, scan dan de onderstaande QR-code (of voer deze handmatig in) op uw apparaat. Voer daarna ter controle het token in in het veld. Om twee-factorauthenticatie uit te schakelen voert u ter controle het token in in het veld.',
 	'twofactorauth-legend' => 'Twee-factor authenticatie',
 	'twofactorauth-account' => 'Gebruikersnaam voor twee-factor:',
 	'twofactorauth-secret' => 'Geheime sleutel voor twee-factor:',
