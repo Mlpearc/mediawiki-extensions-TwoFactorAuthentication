@@ -154,6 +154,33 @@ $messages['es'] = array(
 	'twofactorauth-scratchwarning-text' => '<b>¡Atención!</b> El número de claves de respaldo que tienes para autenticación de dos factores se está agotando. Es recomendable que $1 pronto.',
 );
 
+/** Galician (galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'twofactorauth-desc' => 'Proporciona un soporte de autenticación mediante HMAC baseado en contrasinais dunha soa vez',
+	'twofactorauth' => 'Autenticación de dous factores',
+	'twofactorauth-text' => 'Isto permítelle activar ou desactivar a autenticación de dous factores. Se está activando a autenticación de dous factores, dixitalice o código QR inferior (ou insira manualmente o número secreto) no seu dispositivo. Logo introduza un pase no campo para a verificación. Se está desactivando a autenticación de dous factores, insira un pase no campo para verificalo e finalizar a desactivación.',
+	'twofactorauth-legend' => 'Autenticación de dous factores',
+	'twofactorauth-account' => 'Nome da conta de dous factores:',
+	'twofactorauth-secret' => 'Clave secreta de dous factores:',
+	'twofactorauth-title-enable' => 'Activar a autenticación de dous factores',
+	'twofactorauth-title-disable' => 'Desactivar a autenticación de dous factores',
+	'twofactorauth-title-reset' => 'Restablecer a autenticación de dous factores',
+	'twofactorauth-enabledisable' => 'Activar/Desactivar a autenticación de dous factores',
+	'twofactorauth-token' => 'Pase',
+	'twofactorauth-qrcode' => 'Código QR secreto',
+	'twofactorauth-scratch' => 'Pases de respaldo',
+	'twofactorauth-authfailed' => 'Erro ao validar as credenciais de dous factores',
+	'twofactorauth-success-enable' => 'A verificación en dous pasos activouse correctamente.',
+	'twofactorauth-success-disable' => 'A verificación en dous pasos desactivouse correctamente.',
+	'twofactoruath-enable' => 'Activar',
+	'twofactorauth-disable' => 'Desactivar',
+	'twofactorauth-resetscratchtokens' => 'Restablecer os pases de respaldo',
+	'twofactorauth-scratchwarning-link' => 'restableza os seus pases de respaldo',
+	'twofactorauth-scratchwarning-text' => '<b>Atención!</b> O número de pases de respaldo que ten para a autenticación de dous factores está a piques de se esgotar. Recoméndase que $1 axiña.',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
