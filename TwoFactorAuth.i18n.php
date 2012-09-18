@@ -90,6 +90,13 @@ $messages['be-tarask'] = array(
 	'twofactorauth-disable' => 'Выключыць',
 );
 
+/** Breton (brezhoneg)
+ * @author Y-M D
+ */
+$messages['br'] = array(
+	'twofactoruath-enable' => 'Gweredekaat',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  * @author Metalhead64
