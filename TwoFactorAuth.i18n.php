@@ -79,7 +79,7 @@ $messages['ar'] = array(
 	'twofactorauth-disable' => 'عطّل',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
 $messages['be-tarask'] = array(
@@ -125,7 +125,7 @@ $messages['de'] = array(
 	'twofactorauth-scratchwarning-text' => '<b>Achtung!</b> Deine Sicherungstoken für die Zwei-Faktor-Authentifizierung gehen zu Neige. Es wird $1 empfohlen.',
 );
 
-/** German (formal address) (‪Deutsch (Sie-Form)‬)
+/** German (formal address) (Deutsch (Sie-Form)‎)
  * @author Kghbln
  */
 $messages['de-formal'] = array(
