@@ -19,6 +19,7 @@ class TwoFactorUserTest extends MediaWikiTestCase {
 	}
 
 	protected function setUp() {
+		parent::setUp();
 		$this->twofactoruser->loadFromDatabase();
 		if( $this->twofactoruser->enabled() ) {
 			$this->twofactoruser->disable();
