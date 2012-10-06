@@ -59,7 +59,7 @@ $wgResourceModules['ext.twofactorauth'] = array(
 	),
 	'position' => 'top',
 	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'TwoFactorAuth',
+	'remoteExtPath' => 'TwoFactorAuthentication',
 );
 
 $wgHooks['AbortLogin'][] = 'TwoFactorAuth_onAbortLogin';
