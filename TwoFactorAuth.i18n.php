@@ -330,6 +330,14 @@ $messages['nl'] = array(
 	'twofactorauth-scratchwarning-text' => '<b>Waarschuwing:</b> het aantal back-uptokens dat u voor twee-factorverificatie hebt is bijna op. U moet snel uw $1.',
 );
 
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'twofactoruath-enable' => 'چارنول',
+	'twofactorauth-disable' => 'ناچارنول',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
