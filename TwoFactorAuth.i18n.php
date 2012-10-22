@@ -364,4 +364,3 @@ $messages['tl'] = array(
 	'twofactorauth-scratchwarning-link' => 'itakdang muli ang iyong mga kahalip na pansalo',
 	'twofactorauth-scratchwarning-text' => '<b>Babala!</b> Kumakaunti na ang bilang ng pansalong mga kahalip na mayroon ka para sa pagpapatunay na Dalawa ang Salik. Iminumungkahi sa iyo na $1 kaagad.',
 );
-
