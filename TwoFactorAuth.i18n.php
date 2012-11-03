@@ -161,6 +161,15 @@ $messages['es'] = array(
 	'twofactorauth-scratchwarning-text' => '<b>¡Atención!</b> El número de claves de respaldo que tienes para autenticación de dos factores se está agotando. Es recomendable que $1 pronto.',
 );
 
+/** French (français)
+ * @author Crochet.david
+ */
+$messages['fr'] = array(
+	'twofactorauth-token' => 'Jeton',
+	'twofactoruath-enable' => 'Activé',
+	'twofactorauth-disable' => 'Désactivé',
+);
+
 /** Galician (galego)
  * @author Toliño
  */
