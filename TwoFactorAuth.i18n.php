@@ -163,11 +163,30 @@ $messages['es'] = array(
 
 /** French (français)
  * @author Crochet.david
+ * @author Gomoko
  */
 $messages['fr'] = array(
+	'twofactorauth-desc' => "Fournit le support d'authentification utilisant HMAC basé sur des mots de passe à utilisation unique",
+	'twofactorauth' => 'Authentification à deux facteurs',
+	'twofactorauth-text' => "Ceci vous permet d'activer ou de désactiver l'authentification à deux facteurs. Si vous activez l'authentification à deux facteurs, balayez le code QR ci-dessous (ou entrez manuellement la phrase secrète) dans votre appareil. Puis entrez une chaîne dans le champ pour le vérifier. Si vous désactivez l'authentification à deux facteurs, saisissez une chaîne dans le champ pour vérifier et désactiver.",
+	'twofactorauth-legend' => 'Authentification à deux facteurs',
+	'twofactorauth-account' => 'Nom de compte à deux facteurs:',
+	'twofactorauth-secret' => 'Clé secrète à deux facteurs:',
+	'twofactorauth-title-enable' => "Activer l'authentification à deux facteurs",
+	'twofactorauth-title-disable' => "Désactiver l'authentification à deux facteurs",
+	'twofactorauth-title-reset' => "Réinitialiser l'authentification à deux facteurs",
+	'twofactorauth-enabledisable' => "Activer/Désactiver l'authentification à deux facteurs",
 	'twofactorauth-token' => 'Jeton',
+	'twofactorauth-qrcode' => 'Code secret QR',
+	'twofactorauth-scratch' => 'Sauvegarder les jetons',
+	'twofactorauth-authfailed' => 'Échec de validation des identités à deux facteurs',
+	'twofactorauth-success-enable' => 'Vérification à deux étapes bien activée.',
+	'twofactorauth-success-disable' => 'Vérification à deux étapes bien désactivée.',
 	'twofactoruath-enable' => 'Activé',
 	'twofactorauth-disable' => 'Désactivé',
+	'twofactorauth-resetscratchtokens' => 'Réinitialiser les jetons enregistrés',
+	'twofactorauth-scratchwarning-link' => 'réinitialiser vos jetons enregistrés',
+	'twofactorauth-scratchwarning-text' => "<b>Attention!</b> Le nombre de jetons enregistrés que vous avez pour l'authentification à deux facteurs diminue. Vous devriez $1 rapidement.",
 );
 
 /** Galician (galego)
