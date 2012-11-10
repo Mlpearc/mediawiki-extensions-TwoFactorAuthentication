@@ -366,6 +366,13 @@ $messages['ps'] = array(
 	'twofactorauth-disable' => 'ناچارنول',
 );
 
+/** Tamil (தமிழ்)
+ * @author மதனாஹரன்
+ */
+$messages['ta'] = array(
+	'twofactoruath-enable' => 'செயலாக்கு',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
