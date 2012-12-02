@@ -77,14 +77,24 @@ $wgHooks['UnitTestsList'][] = 'efTwoFactorAuthRegisterUnitTests';
  * @return bool
  */
 function TwoFactorAuth_LoginForm( &$template ) {
-	$input = '<td class="mw-label"><label for="wpTwoFactorToken">'
-		. wfMsgHtml( 'twofactorauth-token' )
-		. '</label></td><td class="mw-input">'
-		. Html::input( 'wpTwoFactorToken', null, 'password', array(
-			'class' => 'loginPassword', 'id' => 'wpTwoFactorToken', 'tabindex' => '3', 'size' => '20'
-		) ) . '</td>';
-	$template->set( 'extrafields', $input );
+	if( isset( $template->data['extrafields'] ) ) {
+		$extrafields = $template->data['extrafields'];
+	} else {
+		$extrafields = '';
+	}
 
+	// Since it's a textbox, put it at the beginning of the extra fields.
+	$extrafields = Html::rawElement( 'tr', array(),
+		Html::rawElement( 'td', array( 'class' => 'mw-label' ),
+			Html::element( 'label', array( 'for' => 'wpTwoFactorToken' ), wfMessage( 'twofactorauth-token' ) )
+		) .
+		Html::rawElement( 'td', array( 'class' => 'mw-input' ),
+			Html::input( 'wpTwoFactorToken', null, 'password',
+				array( 'class' => 'loginPassword', 'id' => 'wpTwoFactorToken', 'tabindex' => '3', 'size' => '20' ) )
+		)
+	) . $extrafields;
+
+	$template->set( 'extrafields', $extrafields );
 	return true;
 }
 
