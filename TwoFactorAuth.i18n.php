@@ -161,6 +161,14 @@ $messages['es'] = array(
 	'twofactorauth-scratchwarning-text' => '<b>¡Atención!</b> El número de claves de respaldo que tienes para autenticación de dos factores se está agotando. Es recomendable que $1 pronto.',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'twofactoruath-enable' => 'فعال سازی',
+	'twofactorauth-disable' => 'غیرفعال سازی',
+);
+
 /** French (français)
  * @author Crochet.david
  * @author Gomoko
@@ -398,4 +406,20 @@ $messages['tl'] = array(
 	'twofactorauth-resetscratchtokens' => 'Itakdang Muli Ang Mga Kahalip Na Pansalo',
 	'twofactorauth-scratchwarning-link' => 'itakdang muli ang iyong mga kahalip na pansalo',
 	'twofactorauth-scratchwarning-text' => '<b>Babala!</b> Kumakaunti na ang bilang ng pansalong mga kahalip na mayroon ka para sa pagpapatunay na Dalawa ang Salik. Iminumungkahi sa iyo na $1 kaagad.',
+);
+
+/** Ukrainian (українська)
+ * @author Steve.rusyn
+ */
+$messages['uk'] = array(
+	'twofactoruath-enable' => 'Увімкнути',
+	'twofactorauth-disable' => 'Вимкнути',
+);
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Shirayuki
+ */
+$messages['zh-hans'] = array(
+	'twofactoruath-enable' => '启用',
+	'twofactorauth-disable' => '禁用',
 );
