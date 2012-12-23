@@ -374,6 +374,14 @@ $messages['ps'] = array(
 	'twofactorauth-disable' => 'ناچارنول',
 );
 
+/** Swedish (svenska)
+ * @author WikiPhoenix
+ */
+$messages['sv'] = array(
+	'twofactoruath-enable' => 'Aktivera',
+	'twofactorauth-disable' => 'Inaktivera',
+);
+
 /** Tamil (தமிழ்)
  * @author மதனாஹரன்
  */
@@ -420,6 +428,23 @@ $messages['uk'] = array(
  * @author Shirayuki
  */
 $messages['zh-hans'] = array(
+	'twofactorauth' => '双因素身份验证',
+	'twofactorauth-legend' => '双因素身份验证',
+	'twofactorauth-account' => '双因素帐户名：',
+	'twofactorauth-secret' => '双因素机密密钥：',
+	'twofactorauth-title-enable' => '启用双因素身份验证',
+	'twofactorauth-title-disable' => '禁用双因素身份验证',
 	'twofactoruath-enable' => '启用',
+	'twofactorauth-disable' => '禁用',
+);
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Shirayuki
+ */
+$messages['zh-hant'] = array(
+	'twofactorauth' => '雙因素身份驗證',
+	'twofactorauth-legend' => '雙因素身份驗證',
+	'twofactorauth-account' => '雙因素帳戶名：',
+	'twofactoruath-enable' => '啟用',
 	'twofactorauth-disable' => '禁用',
 );
