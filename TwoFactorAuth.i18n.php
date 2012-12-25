@@ -418,10 +418,30 @@ $messages['tl'] = array(
 
 /** Ukrainian (українська)
  * @author Steve.rusyn
+ * @author Ата
  */
 $messages['uk'] = array(
+	'twofactorauth-desc' => 'Забезпечує підтримку автентифікації за допомогою HMAC на основі одноразових паролів',
+	'twofactorauth' => 'Two Factor Authentication',
+	'twofactorauth-text' => 'Це дає змогу ввімкнути або вимкнути двофакторну автентифікацію. Якщо ви вмикаєте двофакторну автентифікацію, відскануйте QR-код унизу (або введіть секрет вручну) у Ваш пристрій. Далі введіть маркер у полі для перевірки. Якщо вимикаєте двофакторну автентифікацію, введіть маркер у полі верифікації і вимкніть.',
+	'twofactorauth-legend' => 'Two Factor Authentication',
+	'twofactorauth-account' => "Двофакторне ім'я облікового запису:",
+	'twofactorauth-secret' => 'Двофакторний секретний ключ:',
+	'twofactorauth-title-enable' => 'Увімкнути Two Factor Authentication',
+	'twofactorauth-title-disable' => 'Вимкнути Two Factor Authentication',
+	'twofactorauth-title-reset' => 'Скинути Two Factor Authentication',
+	'twofactorauth-enabledisable' => 'Увімкнути/Вимкнути Two Factor Authentication',
+	'twofactorauth-token' => 'Маркер',
+	'twofactorauth-qrcode' => 'QR-код секрет',
+	'twofactorauth-scratch' => 'Резервне копіювання маркерів',
+	'twofactorauth-authfailed' => 'Не вдалося перевірити двофакторні повноваження',
+	'twofactorauth-success-enable' => 'Двокрокова верифікація успішно активована.',
+	'twofactorauth-success-disable' => 'Двокрокова верифікація успішно вимкнена.',
 	'twofactoruath-enable' => 'Увімкнути',
 	'twofactorauth-disable' => 'Вимкнути',
+	'twofactorauth-resetscratchtokens' => 'Скиданути резервне копіювання маркерів',
+	'twofactorauth-scratchwarning-link' => 'скидання резервного копіювання маркерів',
+	'twofactorauth-scratchwarning-text' => '<b>Увага!</b> Кількість резервних маркерів, які у Вас є для двофакторної автентифікації, недостатня. Вас рекомендується $1 найближчим часом.',
 );
 
 /** Simplified Chinese (中文（简体）‎)
