@@ -304,6 +304,14 @@ $messages['ja'] = array(
 	'twofactorauth-scratchwarning-text' => '<b>警告!</b> 二要素認証のバックアップ トークン数が不足しています。すぐに$1することをお勧めします。',
 );
 
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'twofactoruath-enable' => 'Enschallde',
+	'twofactorauth-disable' => 'Ußschallde',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
@@ -406,6 +414,8 @@ $messages['ps'] = array(
  */
 $messages['si'] = array(
 	'twofactorauth-token' => 'ටෝකනය',
+	'twofactorauth-qrcode' => 'QR කේත රහස',
+	'twofactorauth-scratch' => 'උපස්ථ ටෝකන',
 	'twofactoruath-enable' => 'සක්‍රීය කරන්න',
 	'twofactorauth-disable' => 'අක්‍රීය කරන්න',
 );
