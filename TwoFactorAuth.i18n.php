@@ -97,6 +97,14 @@ $messages['br'] = array(
 	'twofactoruath-enable' => 'Gweredekaat',
 );
 
+/** Czech (česky)
+ * @author Vks
+ */
+$messages['cs'] = array(
+	'twofactoruath-enable' => 'Povolit',
+	'twofactorauth-disable' => 'Zakázat',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  * @author Metalhead64
@@ -413,11 +421,23 @@ $messages['ps'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'twofactorauth' => 'ද්විසාධක සහතික කිරීම',
+	'twofactorauth-legend' => 'ද්විසාධක සහතික කිරීම',
+	'twofactorauth-account' => 'ද්විසාධක ගිණුමේ නාමය:',
+	'twofactorauth-secret' => 'ද්විසාධක රහස් යතුර:',
+	'twofactorauth-title-enable' => 'ද්විසාධක සහතික කිරීම සක්‍රිය කරන්න',
+	'twofactorauth-title-disable' => 'ද්විසාධක සහතික කිරීම අක්‍රිය කරන්න',
+	'twofactorauth-title-reset' => 'ද්විසාධක සහතික කිරීම යළි සකසන්න',
+	'twofactorauth-enabledisable' => 'ද්විසාධක සහතික කිරීම සක්‍රිය/අක්‍රිය කරන්න',
 	'twofactorauth-token' => 'ටෝකනය',
 	'twofactorauth-qrcode' => 'QR කේත රහස',
 	'twofactorauth-scratch' => 'උපස්ථ ටෝකන',
+	'twofactorauth-success-enable' => 'දෙ පිය සත්‍යාපනය සාර්ථකව සක්‍රිය කරන ලදී.',
+	'twofactorauth-success-disable' => 'දෙ පිය සත්‍යාපනය සාර්ථකව අක්‍රිය කරන ලදී.',
 	'twofactoruath-enable' => 'සක්‍රීය කරන්න',
 	'twofactorauth-disable' => 'අක්‍රීය කරන්න',
+	'twofactorauth-resetscratchtokens' => 'උපස්ථ ටෝකන යළි සකසන්න',
+	'twofactorauth-scratchwarning-link' => 'ඔබේ උපස්ථ ටෝකන යළි සකසන්න',
 );
 
 /** Swedish (svenska)
