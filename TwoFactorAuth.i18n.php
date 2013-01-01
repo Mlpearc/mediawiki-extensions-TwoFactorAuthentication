@@ -205,6 +205,16 @@ $messages['fr'] = array(
 	'twofactorauth-scratchwarning-text' => "<b>Attention!</b> Le nombre de jetons enregistrés que vous avez pour l'authentification à deux facteurs diminue. Vous devriez $1 rapidement.",
 );
 
+/** Franco-Provençal (arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'twofactorauth-token' => 'Jeton',
+	'twofactorauth-qrcode' => 'Code secrèt QR',
+	'twofactoruath-enable' => 'Activar',
+	'twofactorauth-disable' => 'Dèsactivar',
+);
+
 /** Galician (galego)
  * @author Toliño
  */
