@@ -393,30 +393,31 @@ $messages['nl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'twofactorauth-desc' => "A dà l'apògg d'autenticassion dovrand dle ciav basà HMAC a un sol usagi",
+	'twofactorauth-desc' => "A dà l'assistensa d'autenticassion dovrand dle ciav basà su HMAC a usagi ùnich",
 	'twofactorauth' => 'Autenticassion a Doi Fator',
-	'twofactorauth-text' => "Sòn-sì a përmëtt d'abilité o disabilité l'autenticassion a doi fator. S'it të stas abilitand l'autenticassion a doi fator, scandiss ël còdes QR sì-sota (o anseriss ël segret manualment) an tò dispositiv. Peui anseriss un geton ant ël camp për verifiché. S'it të stas disabilitand l'autenticassion a doi fator, anseriss un geton ant ël camp për verifiché e disabilité.",
+	'twofactorauth-text' => "Sòn a-j përmët d'abilité o disabilité l'autenticassion a doi fator. Si chiel a abìlita l'autenticassion a doi fator, ch'a digitalisa ël còdes QR sì-sota (o ch'a anserissa a man la fras segreta) an sò dispositiv. Peui ch'a anserissa un geton ant ël camp për verifiché. Si chiel a disabìlita l'autenticassion a doi fator, ch'a anserissa un geton ant ël camp për verifiché e disabilité.",
 	'twofactorauth-legend' => 'Autenticassion a Doi Fator',
 	'twofactorauth-account' => 'Nòm dël Cont dij Doi Fator:',
 	'twofactorauth-secret' => 'Ciav Segreta dij Doi Fator:',
 	'twofactorauth-title-enable' => "Abìlita l'Autenticassion dij Doi Fator",
 	'twofactorauth-title-disable' => "Disabìlita l'Autenticassion dij Doi Fator",
-	'twofactorauth-title-reset' => "Rimpòsta l'Autenticassion dij Doi Fator",
-	'twofactorauth-enabledisable' => "Abìlita/Disabìlita l'Autenticassion dij Doi Fator",
+	'twofactorauth-title-reset' => "Amposté torna l'Autenticassion a Doi Fator",
+	'twofactorauth-enabledisable' => "Abilité/Disabilité l'Autenticassion a Doi Fator",
 	'twofactorauth-token' => 'Marca-pòst',
 	'twofactorauth-qrcode' => 'Còdes Segret QR',
-	'twofactorauth-scratch' => "Geton d'arzerva",
+	'twofactorauth-scratch' => 'Goerné ij geton',
 	'twofactorauth-authfailed' => 'Falì a validé le credensiaj a doi fator',
 	'twofactorauth-success-enable' => 'Abilità da bin la verìfica a doi pass.',
 	'twofactorauth-success-disable' => 'Disabilità da bin la verìfica a doi pass.',
 	'twofactoruath-enable' => 'Abìlita',
 	'twofactorauth-disable' => 'Disabìlita',
-	'twofactorauth-resetscratchtokens' => "Rimpòsta ij Geton d'Arzerva",
-	'twofactorauth-scratchwarning-link' => "rimpòsta ij tò geton d'arzerva",
-	'twofactorauth-scratchwarning-text' => "<b>Avis!</b> Ël nùmer ëd geton d'arzerva ch'it l'has për l'autenticassion a Goi fator a sta caland. A s'arcomanda ëd $1 prest.",
+	'twofactorauth-resetscratchtokens' => 'Amposté torna ij Geton argistrà',
+	'twofactorauth-scratchwarning-link' => "d'amposté torna ij sò geton argistrà",
+	'twofactorauth-scratchwarning-text' => "<b>Avis!</b> Ël nùmer ëd geton argistrà ch'a l'ha për l'autenticassion a doi fator a cala. A s'arcomanda $1 tòst.",
 );
 
 /** Pashto (پښتو)
