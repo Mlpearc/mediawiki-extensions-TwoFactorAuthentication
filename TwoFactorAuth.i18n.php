@@ -523,14 +523,19 @@ $messages['uk'] = array(
 
 /** Simplified Chinese (中文（简体）‎)
  * @author Shirayuki
+ * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
+	'twofactorauth-desc' => '提供使用基于HMAC的一次性密码的身份验证支持',
 	'twofactorauth' => '双因素身份验证',
 	'twofactorauth-legend' => '双因素身份验证',
 	'twofactorauth-account' => '双因素帐户名：',
 	'twofactorauth-secret' => '双因素机密密钥：',
 	'twofactorauth-title-enable' => '启用双因素身份验证',
 	'twofactorauth-title-disable' => '禁用双因素身份验证',
+	'twofactorauth-title-reset' => '重置双因素身份验证',
+	'twofactorauth-enabledisable' => '启用/禁用双因素身份验证',
+	'twofactorauth-token' => '令牌',
 	'twofactoruath-enable' => '启用',
 	'twofactorauth-disable' => '禁用',
 );
