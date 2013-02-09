@@ -322,6 +322,15 @@ $messages['ja'] = array(
 	'twofactorauth-scratchwarning-text' => '<b>警告!</b> 二要素認証のバックアップ トークン数が不足しています。すぐに$1することをお勧めします。',
 );
 
+/** Georgian (ქართული)
+ * @author David1010
+ */
+$messages['ka'] = array(
+	'twofactorauth-token' => 'ჟეტონი',
+	'twofactoruath-enable' => 'ჩართული',
+	'twofactorauth-disable' => 'გამორთული',
+);
+
 /** Colognian (Ripoarisch)
  * @author Purodha
  */
