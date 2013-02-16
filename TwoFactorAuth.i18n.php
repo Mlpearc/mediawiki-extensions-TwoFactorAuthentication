@@ -46,11 +46,12 @@ $messages['en'] = array(
  * @author Darth Kule
  * @author Nemo bis
  * @author Ryan Lane <rlane@wikimedia.org>
+ * @author Shirayuki
  * @author Tyler Romeo <tylerromeo@gmail.com>
  */
 $messages['qqq'] = array(
 	'twofactorauth-desc' => '{{desc}}',
-	'twofactorauth' => 'Extension name, found on Special:Version',
+	'twofactorauth' => 'Extension name, found on [[Special:Version]]',
 	'twofactorauth-text' => 'Introduction and usage text on Special:TwoFactorAuthAuth.',
 	'twofactorauth-legend' => 'HTMLForm label for the fieldset on Special:TwoFactorAuth.',
 	'twofactorauth-account' => 'Account name associated with two factor authentication on this wiki (username@<wiki name>) found on Special:TwoFactorAuth.',
@@ -58,7 +59,7 @@ $messages['qqq'] = array(
 	'twofactorauth-title-enable' => 'Page title on Special:TwoFactorAuth, when enabling twofactor.',
 	'twofactorauth-title-disable' => 'Page title on Special:TwoFactorAuth while disabling twofactor.',
 	'twofactorauth-title-reset' => 'Page title when resetting scratch tokens',
-	'twofactorauth-enabledisable' => 'Label for the link to Special:TwoFactorAuth from Special:Preferences.',
+	'twofactorauth-enabledisable' => 'Label for the link to Special:TwoFactorAuth from [[Special:Preferences]].',
 	'twofactorauth-token' => 'HTMLForm label, found on Special:TwoFactorAuth, when verifying twofactor.',
 	'twofactorauth-qrcode' => 'HTMLForm label, found on Special:TwoFactorAuth, for the QR code secret.',
 	'twofactorauth-scratch' => 'HTMLForm label, found on Special:TwoFactorAuth, for the backup codes.',
