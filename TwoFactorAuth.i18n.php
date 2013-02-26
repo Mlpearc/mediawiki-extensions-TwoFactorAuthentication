@@ -69,8 +69,8 @@ $messages['qqq'] = array(
 	'twofactorauth-disable' => 'Label for submit button to disable two-factor auth',
 	'twofactorauth-resetscratchtokens' => 'Label for submit button to reset scratch tokens',
 	'twofactorauth-scratchwarning-link' => 'Text for the link to Special:TwoFactorAuth when warning the user about backup tokens. It is used as parameter $1 in {{msg-mw|Twofactorauth-scratchwarning-text}}.',
-	'twofactorauth-scratchwarning-text' => 'This message is a warning and the first parameter is the link to the special page.
-* <code>$1</code>: defined as {{msg-mw|twofactorauth-scratchwarning-link}}',
+	'twofactorauth-scratchwarning-text' => 'This message is a warning and the first parameter is the link to the special page. Parameters:
+* $1 - defined as {{msg-mw|twofactorauth-scratchwarning-link}}',
 );
 
 /** Arabic (العربية)
