@@ -50,7 +50,7 @@ $messages['en'] = array(
  * @author Tyler Romeo <tylerromeo@gmail.com>
  */
 $messages['qqq'] = array(
-	'twofactorauth-desc' => '{{desc}}',
+	'twofactorauth-desc' => '{{desc|name=Two Factor Authentication|url=http://www.mediawiki.org/wiki/Extension:TwoFactorAuthentication}}',
 	'twofactorauth' => 'Extension name, found on [[Special:Version]]',
 	'twofactorauth-text' => 'Introduction and usage text on Special:TwoFactorAuth.',
 	'twofactorauth-legend' => 'HTMLForm label for the fieldset on Special:TwoFactorAuth.',
