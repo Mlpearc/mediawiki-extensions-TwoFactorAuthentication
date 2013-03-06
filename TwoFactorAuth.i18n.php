@@ -27,6 +27,7 @@ $messages['en'] = array(
 	'twofactorauth-title-enable' => 'Enable Two Factor Authentication',
 	'twofactorauth-title-disable' => 'Disable Two Factor Authentication',
 	'twofactorauth-title-reset' => 'Reset Two Factor Authentication',
+	'twofactorauth-title-auth' => 'Login with Two Factor Authentication',
 	'twofactorauth-enabledisable' => 'Enable/Disable Two Factor Authentication',
 	'twofactorauth-token' => 'Token',
 	'twofactorauth-qrcode' => 'QR Code Secret',
@@ -34,8 +35,9 @@ $messages['en'] = array(
 	'twofactorauth-authfailed' => 'Failed to validate two factor credentials',
 	'twofactorauth-success-enable' => 'Two step verification successfully enabled.',
 	'twofactorauth-success-disable' => 'Two step verification successfully disabled.',
-	'twofactoruath-enable' => 'Enable',
+	'twofactorauth-enable' => 'Enable',
 	'twofactorauth-disable' => 'Disable',
+	'twofactorauth-auth' => 'Login',
 	'twofactorauth-resetscratchtokens' => 'Reset Backup Tokens',
 	'twofactorauth-scratchwarning-link' => 'reset your backup tokens',
 	'twofactorauth-scratchwarning-text' => '<b>Warning!</b> The number of backup tokens you have for Two Factor authentication is running low. It is recommended you $1 soon.',
@@ -61,6 +63,7 @@ $messages['qqq'] = array(
 	'twofactorauth-title-enable' => 'Page title on Special:TwoFactorAuth, when enabling twofactor.',
 	'twofactorauth-title-disable' => 'Page title on Special:TwoFactorAuth while disabling twofactor.',
 	'twofactorauth-title-reset' => 'Page title when resetting scratch tokens',
+	'twofactorauth-title-auth' => 'Page title when the user is logging in and needs to authenticate with a token',
 	'twofactorauth-enabledisable' => 'Label for the link to Special:TwoFactorAuth from [[Special:Preferences]].',
 	'twofactorauth-token' => 'HTMLForm label, found on Special:TwoFactorAuth, when verifying twofactor.',
 	'twofactorauth-qrcode' => 'HTMLForm label, found on Special:TwoFactorAuth, for the QR code secret.',
@@ -68,7 +71,9 @@ $messages['qqq'] = array(
 	'twofactorauth-authfailed' => 'Plain text, found on Special:TwoFactorAuth when failing to enable twofactor.',
 	'twofactorauth-success-enable' => 'Success message after enabling two-factor authentication.',
 	'twofactorauth-success-disable' => 'Success message after disabling two-factor authentication.',
+	'twofactorauth-enable' => 'Label for submit button to enable two-factor auth',
 	'twofactorauth-disable' => 'Label for submit button to disable two-factor auth',
+	'twofactorauth-auth' => 'Label for submit button to log in with two-factor auth',
 	'twofactorauth-resetscratchtokens' => 'Label for submit button to reset scratch tokens',
 	'twofactorauth-scratchwarning-link' => 'Text for the link to Special:TwoFactorAuth when warning the user about backup tokens. It is used as parameter $1 in {{msg-mw|Twofactorauth-scratchwarning-text}}.',
 	'twofactorauth-scratchwarning-text' => 'This message is a warning and the first parameter is the link to the special page. Parameters:
@@ -89,7 +94,7 @@ $messages['be-tarask'] = array(
 	'twofactorauth-desc' => 'Прапануе падтрымку аўтэнтыфікацыі з выкарыстаньнем аднаразовых пароляў на аснове HMAC',
 	'twofactorauth' => 'Двухфактарная аўтэнтыфікацыя',
 	'twofactorauth-token' => 'Токен',
-	'twofactoruath-enable' => 'Уключыць',
+	'twofactorauth-enable' => 'Уключыць',
 	'twofactorauth-disable' => 'Выключыць',
 );
 
@@ -99,7 +104,7 @@ $messages['be-tarask'] = array(
  */
 $messages['br'] = array(
 	'twofactorauth-token' => 'Jedouer',
-	'twofactoruath-enable' => 'Gweredekaat',
+	'twofactorauth-enable' => 'Gweredekaat',
 	'twofactorauth-disable' => 'Diweredekaat',
 );
 
@@ -107,7 +112,7 @@ $messages['br'] = array(
  * @author Vks
  */
 $messages['cs'] = array(
-	'twofactoruath-enable' => 'Povolit',
+	'twofactorauth-enable' => 'Povolit',
 	'twofactorauth-disable' => 'Zakázat',
 );
 
@@ -132,7 +137,7 @@ $messages['de'] = array(
 	'twofactorauth-authfailed' => 'Die Zwei-Faktor-Anmeldeinformationen konnten nicht bestätigt werden.',
 	'twofactorauth-success-enable' => 'Zwei-Schritte-Überprüfung wurde erfolgreich aktiviert.',
 	'twofactorauth-success-disable' => 'Zwei-Schritte-Überprüfung wurde erfolgreich deaktiviert.',
-	'twofactoruath-enable' => 'Aktivieren',
+	'twofactorauth-enable' => 'Aktivieren',
 	'twofactorauth-disable' => 'Deaktivieren',
 	'twofactorauth-resetscratchtokens' => 'Sicherungstoken zurücksetzen',
 	'twofactorauth-scratchwarning-link' => 'Setze deine Sicherungstoken zurück',
@@ -168,7 +173,7 @@ $messages['es'] = array(
 	'twofactorauth-authfailed' => 'Error al validar las credenciales de dos factores',
 	'twofactorauth-success-enable' => 'La verificación de dos pasos se ha activado correctamente.',
 	'twofactorauth-success-disable' => 'La verificación de dos pasos se ha desactivado correctamente.',
-	'twofactoruath-enable' => 'Activar',
+	'twofactorauth-enable' => 'Activar',
 	'twofactorauth-disable' => 'Desactivar',
 	'twofactorauth-resetscratchtokens' => 'Restablecer las claves de respaldo',
 	'twofactorauth-scratchwarning-link' => 'restablecer tus claves de respaldo',
@@ -179,7 +184,7 @@ $messages['es'] = array(
  * @author Mjbmr
  */
 $messages['fa'] = array(
-	'twofactoruath-enable' => 'فعال سازی',
+	'twofactorauth-enable' => 'فعال سازی',
 	'twofactorauth-disable' => 'غیرفعال سازی',
 );
 
@@ -204,7 +209,7 @@ $messages['fr'] = array(
 	'twofactorauth-authfailed' => 'Échec de validation des identités à deux facteurs',
 	'twofactorauth-success-enable' => 'Vérification à deux étapes bien activée.',
 	'twofactorauth-success-disable' => 'Vérification à deux étapes bien désactivée.',
-	'twofactoruath-enable' => 'Activé',
+	'twofactorauth-enable' => 'Activé',
 	'twofactorauth-disable' => 'Désactivé',
 	'twofactorauth-resetscratchtokens' => 'Réinitialiser les jetons enregistrés',
 	'twofactorauth-scratchwarning-link' => 'réinitialiser vos jetons enregistrés',
@@ -217,7 +222,7 @@ $messages['fr'] = array(
 $messages['frp'] = array(
 	'twofactorauth-token' => 'Jeton',
 	'twofactorauth-qrcode' => 'Code secrèt QR',
-	'twofactoruath-enable' => 'Activar',
+	'twofactorauth-enable' => 'Activar',
 	'twofactorauth-disable' => 'Dèsactivar',
 );
 
@@ -241,7 +246,7 @@ $messages['gl'] = array(
 	'twofactorauth-authfailed' => 'Erro ao validar as credenciais de dous factores',
 	'twofactorauth-success-enable' => 'A verificación en dous pasos activouse correctamente.',
 	'twofactorauth-success-disable' => 'A verificación en dous pasos desactivouse correctamente.',
-	'twofactoruath-enable' => 'Activar',
+	'twofactorauth-enable' => 'Activar',
 	'twofactorauth-disable' => 'Desactivar',
 	'twofactorauth-resetscratchtokens' => 'Restablecer os pases de respaldo',
 	'twofactorauth-scratchwarning-link' => 'restableza os seus pases de respaldo',
@@ -268,7 +273,7 @@ $messages['hsb'] = array(
 	'twofactorauth-authfailed' => 'Dwufaktorowe přizjewjenske informacije njedachu so přepruwować',
 	'twofactorauth-success-enable' => 'Dwukročelowe přepruwowanje wuspěšnje zmóžnjene.',
 	'twofactorauth-success-disable' => 'Dwukročelowe přepruwowanje wuspěšnje znjemóžnjene.',
-	'twofactoruath-enable' => 'Zmóžnić',
+	'twofactorauth-enable' => 'Zmóžnić',
 	'twofactorauth-disable' => 'Znjemóžnić',
 	'twofactorauth-resetscratchtokens' => 'Zawěsćenske tokeny wróćo stajić',
 	'twofactorauth-scratchwarning-link' => 'swoje zawěsćenske tokeny wróćo stajiš',
@@ -295,7 +300,7 @@ $messages['it'] = array(
 	'twofactorauth-authfailed' => 'Impossibile convalidare le credenziali a due fattori',
 	'twofactorauth-success-enable' => 'Verifica in due passaggi correttamente abilitata.',
 	'twofactorauth-success-disable' => 'Verifica in due passaggi correttamente disabilitata.',
-	'twofactoruath-enable' => 'Abilita',
+	'twofactorauth-enable' => 'Abilita',
 	'twofactorauth-disable' => 'Disabilita',
 	'twofactorauth-resetscratchtokens' => 'Ripristino token di backup',
 	'twofactorauth-scratchwarning-link' => 'ripristinare i propri token di backup',
@@ -321,7 +326,7 @@ $messages['ja'] = array(
 	'twofactorauth-authfailed' => '二要素信用情報の検証に失敗しました。',
 	'twofactorauth-success-enable' => '二段階検証を有効にしました。',
 	'twofactorauth-success-disable' => '二段階検証を無効にしました。',
-	'twofactoruath-enable' => '有効',
+	'twofactorauth-enable' => '有効',
 	'twofactorauth-disable' => '無効',
 	'twofactorauth-resetscratchtokens' => 'バックアップ トークンをリセット',
 	'twofactorauth-scratchwarning-link' => '自分のバックアップ トークンをリセット',
@@ -333,7 +338,7 @@ $messages['ja'] = array(
  */
 $messages['ka'] = array(
 	'twofactorauth-token' => 'ჟეტონი',
-	'twofactoruath-enable' => 'ჩართული',
+	'twofactorauth-enable' => 'ჩართული',
 	'twofactorauth-disable' => 'გამორთული',
 );
 
@@ -341,7 +346,7 @@ $messages['ka'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
-	'twofactoruath-enable' => 'Enschallde',
+	'twofactorauth-enable' => 'Enschallde',
 	'twofactorauth-disable' => 'Ußschallde',
 );
 
@@ -349,7 +354,7 @@ $messages['ksh'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
-	'twofactoruath-enable' => 'Aschalten',
+	'twofactorauth-enable' => 'Aschalten',
 	'twofactorauth-disable' => 'Ausschalten',
 );
 
@@ -373,7 +378,7 @@ $messages['mk'] = array(
 	'twofactorauth-authfailed' => 'Не успеав да го заверам двофакторското полномоштво',
 	'twofactorauth-success-enable' => 'Двофакторската заверка е успешно овозможена.',
 	'twofactorauth-success-disable' => 'Двофакторската заверка е успешно оневозможена.',
-	'twofactoruath-enable' => 'Овозможи',
+	'twofactorauth-enable' => 'Овозможи',
 	'twofactorauth-disable' => 'Оневозможи',
 	'twofactorauth-resetscratchtokens' => 'Презадавање на резервни жетони',
 	'twofactorauth-scratchwarning-link' => 'презададете резервни жетони',
@@ -400,7 +405,7 @@ $messages['nl'] = array(
 	'twofactorauth-authfailed' => 'Het valideren van de gebruikersgegevens voor twee-factor is mislukt.',
 	'twofactorauth-success-enable' => 'Twee-factorverificatie is ingeschakeld.',
 	'twofactorauth-success-disable' => 'Twee-factorverificatie is uitgeschakeld.',
-	'twofactoruath-enable' => 'Inschakelen',
+	'twofactorauth-enable' => 'Inschakelen',
 	'twofactorauth-disable' => 'Uitschakelen',
 	'twofactorauth-resetscratchtokens' => 'Back-uptokens opnieuw instellen',
 	'twofactorauth-scratchwarning-link' => 'back-uptokens opnieuw instellen',
@@ -428,7 +433,7 @@ $messages['pms'] = array(
 	'twofactorauth-authfailed' => 'Falì a validé le credensiaj a doi fator',
 	'twofactorauth-success-enable' => 'Abilità da bin la verìfica a doi pass.',
 	'twofactorauth-success-disable' => 'Disabilità da bin la verìfica a doi pass.',
-	'twofactoruath-enable' => 'Abìlita',
+	'twofactorauth-enable' => 'Abìlita',
 	'twofactorauth-disable' => 'Disabìlita',
 	'twofactorauth-resetscratchtokens' => 'Amposté torna ij Geton argistrà',
 	'twofactorauth-scratchwarning-link' => "d'amposté torna ij sò geton argistrà",
@@ -439,7 +444,7 @@ $messages['pms'] = array(
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
 $messages['ps'] = array(
-	'twofactoruath-enable' => 'چارنول',
+	'twofactorauth-enable' => 'چارنول',
 	'twofactorauth-disable' => 'ناچارنول',
 );
 
@@ -460,7 +465,7 @@ $messages['si'] = array(
 	'twofactorauth-scratch' => 'උපස්ථ ටෝකන',
 	'twofactorauth-success-enable' => 'දෙ පිය සත්‍යාපනය සාර්ථකව සක්‍රිය කරන ලදී.',
 	'twofactorauth-success-disable' => 'දෙ පිය සත්‍යාපනය සාර්ථකව අක්‍රිය කරන ලදී.',
-	'twofactoruath-enable' => 'සක්‍රීය කරන්න',
+	'twofactorauth-enable' => 'සක්‍රීය කරන්න',
 	'twofactorauth-disable' => 'අක්‍රීය කරන්න',
 	'twofactorauth-resetscratchtokens' => 'උපස්ථ ටෝකන යළි සකසන්න',
 	'twofactorauth-scratchwarning-link' => 'ඔබේ උපස්ථ ටෝකන යළි සකසන්න',
@@ -470,7 +475,7 @@ $messages['si'] = array(
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
-	'twofactoruath-enable' => 'Aktivera',
+	'twofactorauth-enable' => 'Aktivera',
 	'twofactorauth-disable' => 'Inaktivera',
 );
 
@@ -478,7 +483,7 @@ $messages['sv'] = array(
  * @author மதனாஹரன்
  */
 $messages['ta'] = array(
-	'twofactoruath-enable' => 'செயலாக்கு',
+	'twofactorauth-enable' => 'செயலாக்கு',
 );
 
 /** Tagalog (Tagalog)
@@ -501,7 +506,7 @@ $messages['tl'] = array(
 	'twofactorauth-authfailed' => 'Nabigo sa pagpapatunay ng dalawang salik na mga kredensiyal',
 	'twofactorauth-success-enable' => 'Matagumpay na napagana ang pagpapatunay na may dalawang hakbang.',
 	'twofactorauth-success-disable' => 'Hindi na pinagagana ang pagpapatunay na may dalawang hakbang.',
-	'twofactoruath-enable' => 'Paganahin',
+	'twofactorauth-enable' => 'Paganahin',
 	'twofactorauth-disable' => 'Huwag paganahin',
 	'twofactorauth-resetscratchtokens' => 'Itakdang Muli Ang Mga Kahalip Na Pansalo',
 	'twofactorauth-scratchwarning-link' => 'itakdang muli ang iyong mga kahalip na pansalo',
@@ -529,7 +534,7 @@ $messages['uk'] = array(
 	'twofactorauth-authfailed' => 'Не вдалося перевірити двофакторні повноваження',
 	'twofactorauth-success-enable' => 'Двокрокова верифікація успішно активована.',
 	'twofactorauth-success-disable' => 'Двокрокова верифікація успішно вимкнена.',
-	'twofactoruath-enable' => 'Увімкнути',
+	'twofactorauth-enable' => 'Увімкнути',
 	'twofactorauth-disable' => 'Вимкнути',
 	'twofactorauth-resetscratchtokens' => 'Скиданути резервне копіювання маркерів',
 	'twofactorauth-scratchwarning-link' => 'скидання резервного копіювання маркерів',
@@ -551,7 +556,7 @@ $messages['zh-hans'] = array(
 	'twofactorauth-title-reset' => '重置双因素身份验证',
 	'twofactorauth-enabledisable' => '启用/禁用双因素身份验证',
 	'twofactorauth-token' => '令牌',
-	'twofactoruath-enable' => '启用',
+	'twofactorauth-enable' => '启用',
 	'twofactorauth-disable' => '禁用',
 );
 
@@ -562,6 +567,6 @@ $messages['zh-hant'] = array(
 	'twofactorauth' => '雙因素身份驗證',
 	'twofactorauth-legend' => '雙因素身份驗證',
 	'twofactorauth-account' => '雙因素帳戶名：',
-	'twofactoruath-enable' => '啟用',
+	'twofactorauth-enable' => '啟用',
 	'twofactorauth-disable' => '禁用',
 );

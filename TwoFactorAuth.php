@@ -34,6 +34,11 @@ $wgTwoFactorWindowSize = 30;
  */
 $wgTwoFactorWindowLeniency = 1;
 
+/**
+ * Whether to show the two factor authentication on another page.
+ */
+$wgTwoFactorSeparatePages = true;
+
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'TwoFactorAuth',
@@ -77,6 +82,12 @@ $wgHooks['UnitTestsList'][] = 'efTwoFactorAuthRegisterUnitTests';
  * @return bool
  */
 function TwoFactorAuth_LoginForm( &$template ) {
+	global $wgTwoFactorSeparatePages;
+
+	if( $wgTwoFactorSeparatePages ) {
+		return true;
+	}
+
 	if( isset( $template->data['extrafields'] ) ) {
 		$extrafields = $template->data['extrafields'];
 	} else {
@@ -144,12 +155,24 @@ function TwoFactorAuth_PreferencesForm( $user, &$preferences ) {
  * @param $result bool
  * @return bool
  */
-function TwoFactorAuth_onAbortLogin( $user, $password, &$result ) {
-	global $wgRequest;
+function TwoFactorAuth_onAbortLogin( User $user, $password, &$result ) {
+	global $wgTwoFactorSeparatePages;
 
+	$context = RequestContext::getMain();
 	$authuser = new TwoFactorAuthUser( $user );
-	$token = $wgRequest->getText( 'wpTwoFactorToken' );
-	if( $authuser->loadFromDatabase() && !$authuser->verifyToken( $token ) ) {
+	if ( !$authuser->loadFromDatabase() ) {
+		return true;
+	}
+
+	if ( $wgTwoFactorSeparatePages && $context->getTitle()->equals( SpecialPage::getTitleFor( 'Userlogin' ) ) ) {
+		$authuser->saveToSession();
+		$context->getRequest()->setSessionData( 'wsLoginRequest', $context->getRequest() );
+		$context->getOutput()->redirect(
+			SpecialPage::getTitleFor( 'TwoFactorAuth', 'auth' )
+			->getFullURL( '', false, PROTO_CURRENT )
+		);
+		return false;
+	} elseif( !$authuser->verifyToken( $context->getRequest()->getText( 'wpTwoFactorToken' ) ) ) {
 		$result = LoginForm::WRONG_PLUGIN_PASS;
 		return false;
 	}

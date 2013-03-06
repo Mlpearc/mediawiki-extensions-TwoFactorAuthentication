@@ -26,6 +26,7 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 
 		$this->action = $this->TwoFactorUser->enabled() ? 'disable' : 'enable';
 		$this->reset = $this->getRequest()->getCheck( 'reset' );
+		$this->loginRequest = false;
 	}
 
 	/**
@@ -43,8 +44,26 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	 */
 	protected function checkExecutePermissions( User $user ) {
 		parent::checkExecutePermissions( $user );
-		if( !$user->isLoggedIn() ) {
+		if( !$user->isLoggedIn() && !$this->loginRequest ) {
 			throw new UserNotLoggedIn();
+		}
+	}
+
+	/**
+	 * If the parameter is /auth, we're authenticating.
+	 */
+	function setParameter( $par ) {
+		global $wgTwoFactorSeparatePages;
+		if ( $wgTwoFactorSeparatePages && $par === 'auth' ) {
+			$loginRequest = $this->getRequest()->getSessionData( 'wsLoginRequest' );
+			if ( $loginRequest ) {
+				$this->action = 'auth';
+				$this->loginRequest = $loginRequest;
+
+				$user = User::newFromName( $this->loginRequest->getText( 'wpName' ) );
+				$this->TwoFactorUser = new TwoFactorAuthUser( $user );
+				$this->TwoFactorUser->loadFromDatabase();
+			}
 		}
 	}
 
@@ -136,14 +155,22 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	 * @return bool
 	 */
 	public function onSubmit( array $formData ) {
-		var_dump( $formData );
-		$verify = $this->TwoFactorUser->verifyToken( $formData['token'] );
-		if( !$verify ) {
-			$this->getOutput()->addWikiMsg( 'twofactorauth-authfailed' );
-			return false;
+		// If the action is 'auth', let LoginForm do the processing.
+		if( $this->action !== 'auth' ) {
+			$verify = $this->TwoFactorUser->verifyToken( $formData['token'] );
+			if( !$verify ) {
+				$this->getOutput()->addWikiMsg( 'twofactorauth-authfailed' );
+				return false;
+			}
 		}
 
-		if( $this->action == 'enable' ) {
+		if( $this->action == 'auth' ) {
+			$this->loginRequest->setVal( 'wpTwoFactorToken', $formData['token'] );
+			RequestContext::getMain()->setRequest( $this->loginRequest );
+			$login = new LoginForm( $this->loginRequest );
+			$login->execute( null );
+			$result = true;
+		} elseif( $this->action == 'enable' ) {
 			$result = $this->TwoFactorUser->enable();
 		} elseif( $this->reset ) {
 			$this->TwoFactorUser->regenerateScratchTokens();
@@ -165,6 +192,10 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	 * Display a success message.
 	 */
 	public function onSuccess() {
+		if( $this->action == 'auth' ) {
+			return;
+		}
+
 		if( $this->reset ) {
 			$backupTokens = Html::rawElement( 'table', array(),
 				Html::rawElement( 'tr', array(),

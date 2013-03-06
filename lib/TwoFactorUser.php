@@ -15,7 +15,7 @@ class TwoFactorAuthUser extends ContextSource {
 	 *
 	 * @param $user User object
 	 */
-	public function __construct( $user ) {
+	public function __construct( User $user ) {
 		$this->user = $user;
 		$this->enabled = false;
 	}
