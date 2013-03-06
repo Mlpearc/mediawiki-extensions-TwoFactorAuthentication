@@ -9,22 +9,30 @@
 
 class SpecialTwoFactorAuth extends FormSpecialPage {
 
-	private $TwoFactorUser;
+	/**
+	 * A TwoFactorUser instance representing two-factor auth info for the user
+	 */
+	private $twoFactorUser;
+
+	/**
+	 * The WebRequest object from the original login
+	 */
+	private $loginRequest;
 
 	/**
 	 * Make a new TwoFactorAuth user for the current context. First try to load information
 	 * from the database, then from the session. If no TwoFactorAuth information is available
 	 * for the current user, make new info and store it in the session.
 	 */
-	public function __construct() {
+	function __construct() {
 		parent::__construct( 'TwoFactorAuth' );
-		$this->TwoFactorUser = new TwoFactorAuthUser( $this->getUser() );
-		if( !$this->TwoFactorUser->loadFromDatabase() && !$this->TwoFactorUser->loadFromSession() ) {
-			$this->TwoFactorUser->loadFromRandom();
-			$this->TwoFactorUser->saveToSession();
+		$this->twoFactorUser = new TwoFactorAuthUser( $this->getUser() );
+		if ( !$this->twoFactorUser->loadFromDatabase() && !$this->twoFactorUser->loadFromSession() ) {
+			$this->twoFactorUser->loadFromRandom();
+			$this->twoFactorUser->saveToSession();
 		}
 
-		$this->action = $this->TwoFactorUser->enabled() ? 'disable' : 'enable';
+		$this->action = $this->twoFactorUser->enabled() ? 'disable' : 'enable';
 		$this->reset = $this->getRequest()->getCheck( 'reset' );
 		$this->loginRequest = false;
 	}
@@ -33,7 +41,7 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	 * This extension deals with authentication, and thus should not be affected by blocks.
 	 * @return bool
 	 */
-	public function requiresUnblock() {
+	function requiresUnblock() {
 		return false;
 	}
 
@@ -42,9 +50,9 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	 *
 	 * @throws UserNotLoggedIn
 	 */
-	protected function checkExecutePermissions( User $user ) {
+	function checkExecutePermissions( User $user ) {
 		parent::checkExecutePermissions( $user );
-		if( !$user->isLoggedIn() && !$this->loginRequest ) {
+		if ( !$user->isLoggedIn() && !$this->loginRequest ) {
 			throw new UserNotLoggedIn();
 		}
 	}
@@ -61,8 +69,8 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 				$this->loginRequest = $loginRequest;
 
 				$user = User::newFromName( $this->loginRequest->getText( 'wpName' ) );
-				$this->TwoFactorUser = new TwoFactorAuthUser( $user );
-				$this->TwoFactorUser->loadFromDatabase();
+				$this->twoFactorUser = new TwoFactorAuthUser( $user );
+				$this->twoFactorUser->loadFromDatabase();
 			}
 		}
 	}
@@ -72,7 +80,7 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	 *
 	 * @return Message
 	 */
-	public function getDescription() {
+	function getDescription() {
 		return $this->msg( "twofactorauth-title-{$this->action}" );
 	}
 
@@ -83,7 +91,7 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	 *
 	 * @return Array of fields
 	 */
-	public function getFormFields() {
+	function getFormFields() {
 		$fields = array();
 		$fields['token'] = array(
 			'type' => 'text',
@@ -95,21 +103,21 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 		// If user is planning to enable two-factor auth, show secrets.
 		// These secrets won't actually be stored in the database until
 		// the user verifies.
-		if( $this->action == 'enable' ) {
-			$secret = $this->TwoFactorUser->getSecret();
+		if ( $this->action == 'enable' ) {
+			$secret = $this->twoFactorUser->getSecret();
 			$this->getOutput()->addModules( 'ext.twofactorauth' );
-			$this->getOutput()->addInlineScript( 'jQuery("#qrcode").qrcode("otpauth://totp/' . $this->TwoFactorUser->getAccount() . '?secret=' . $secret . '")' );
+			$this->getOutput()->addInlineScript( 'jQuery("#qrcode").qrcode("otpauth://totp/' . $this->twoFactorUser->getAccount() . '?secret=' . $secret . '")' );
 
 			$fields['account'] = array(
 				'type' => 'info',
 				'label-message' => 'twofactorauth-account',
-				'default' => $this->TwoFactorUser->getAccount()
+				'default' => $this->twoFactorUser->getAccount()
 			);
 
 			$fields['secret'] = array(
 				'type' => 'info',
 				'label-message' => 'twofactorauth-secret',
-				'default' => $this->TwoFactorUser->getSecret()
+				'default' => $this->twoFactorUser->getSecret()
 			);
 
 			$fields['secretqr'] = array(
@@ -124,7 +132,7 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 				'label-message' => 'twofactorauth-scratch',
 				'raw' => true,
 				'default' => '<ul><li>' .
-					implode( '</li><li>', $this->TwoFactorUser->getScratchTokens() ) .
+					implode( '</li><li>', $this->twoFactorUser->getScratchTokens() ) .
 					'</li></ul>'
 			);
 		}
@@ -138,11 +146,11 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	 * @param HTMLForm $form Form to alter
 	 * @see FormSpecialPage::alterForm
 	 */
-	protected function alterForm( HTMLForm $form ) {
+	function alterForm( HTMLForm $form ) {
 		$form->setSubmitTextMsg( "twofactorauth-{$this->action}" );
 
 		// If action is to disable, add a reset button as well.
-		if( $this->action == 'disable' ) {
+		if ( $this->action == 'disable' ) {
 			$resetLabel = wfMessage( 'twofactorauth-resetscratchtokens' );
 			$form->addButton( 'reset', $resetLabel );
 		}
@@ -156,29 +164,29 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	 */
 	public function onSubmit( array $formData ) {
 		// If the action is 'auth', let LoginForm do the processing.
-		if( $this->action !== 'auth' ) {
+		if ( $this->action !== 'auth' ) {
 			$verify = $this->TwoFactorUser->verifyToken( $formData['token'] );
-			if( !$verify ) {
+			if ( !$verify ) {
 				$this->getOutput()->addWikiMsg( 'twofactorauth-authfailed' );
 				return false;
 			}
 		}
 
-		if( $this->action == 'auth' ) {
+		if ( $this->action == 'auth' ) {
 			$this->loginRequest->setVal( 'wpTwoFactorToken', $formData['token'] );
 			RequestContext::getMain()->setRequest( $this->loginRequest );
 			$login = new LoginForm( $this->loginRequest );
 			$login->execute( null );
 			$result = true;
-		} elseif( $this->action == 'enable' ) {
-			$result = $this->TwoFactorUser->enable();
-		} elseif( $this->reset ) {
-			$this->TwoFactorUser->regenerateScratchTokens();
-			$this->TwoFactorUser->saveToSession();
-			$result = $this->TwoFactorUser->updateScratchTokens();
+		} elseif ( $this->action == 'enable' ) {
+			$result = $this->twoFactorUser->enable();
+		} elseif ( $this->reset ) {
+			$this->twoFactorUser->regenerateScratchTokens();
+			$this->twoFactorUser->saveToSession();
+			$result = $this->twoFactorUser->updateScratchTokens();
 		} else {
-			$this->TwoFactorUser->clearFromSession();
-			$result = $this->TwoFactorUser->disable();
+			$this->twoFactorUser->clearFromSession();
+			$result = $this->twoFactorUser->disable();
 		}
 
 		if ( !$result ) {
@@ -191,18 +199,18 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	/**
 	 * Display a success message.
 	 */
-	public function onSuccess() {
-		if( $this->action == 'auth' ) {
+	function onSuccess() {
+		if ( $this->action == 'auth' ) {
 			return;
 		}
 
-		if( $this->reset ) {
+		if ( $this->reset ) {
 			$backupTokens = Html::rawElement( 'table', array(),
 				Html::rawElement( 'tr', array(),
 					Html::rawElement( 'td', array(), wfMessage( 'twofactorauth-scratch' ) ) .
 					Html::rawElement( 'td', array(),
 						'<ul><li>' .
-						implode( '</li><li>', $this->TwoFactorUser->getScratchTokens() ) .
+						implode( '</li><li>', $this->twoFactorUser->getScratchTokens() ) .
 						'</li></ul>'
 					)
 				)

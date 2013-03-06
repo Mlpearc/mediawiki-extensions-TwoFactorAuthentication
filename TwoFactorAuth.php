@@ -17,6 +17,15 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 1 );
 }
 
+$wgExtensionCredits['other'] = array(
+	'path' => __FILE__,
+	'name' => 'TwoFactorAuth',
+	'author' => 'Tyler Romeo',
+	'version' => '0.2',
+	'url' => 'http://mediawiki.org/wiki/Extension:TwoFactorAuth',
+	'descriptionmsg' => 'twofactorauth-desc',
+);
+
 /**
  * Window size for TOTP, in seconds.
  *
@@ -39,22 +48,13 @@ $wgTwoFactorWindowLeniency = 1;
  */
 $wgTwoFactorSeparatePages = true;
 
-$wgExtensionCredits['other'][] = array(
-	'path' => __FILE__,
-	'name' => 'TwoFactorAuth',
-	'author' => 'Tyler Romeo',
-	'version' => '0.2',
-	'url' => 'http://mediawiki.org/wiki/Extension:TwoFactorAuth',
-	'descriptionmsg' => 'twofactorauth-desc',
-);
+$wgAutoloadClasses['TwoFactorAuthHooks'] = __DIR__ . '/TwoFactorAuth.hooks.php';
+$wgAutoloadClasses['HOTP'] = __DIR__ . '/lib/hotp.php';
+$wgAutoloadClasses['Base32'] = __DIR__ . '/lib/base32.php';
+$wgAutoloadClasses['TwoFactorAuthUser'] = __DIR__ . '/TwoFactorUser.php';
+$wgAutoloadClasses['SpecialTwoFactorAuth'] = __DIR__ . '/SpecialTwoFactorAuth.php';
 
-$dir = dirname( __FILE__ ) . '/';
-
-$wgExtensionMessagesFiles['TwoFactorAuth'] = $dir . 'TwoFactorAuth.i18n.php';
-$wgAutoloadClasses['HOTP'] = $dir . 'lib/hotp.php';
-$wgAutoloadClasses['Base32'] = $dir . 'lib/base32.php';
-$wgAutoloadClasses['TwoFactorAuthUser'] = $dir . 'lib/TwoFactorUser.php';
-$wgAutoloadClasses['SpecialTwoFactorAuth'] = $dir . 'SpecialTwoFactorAuth.php';
+$wgExtensionMessagesFiles['TwoFactorAuth'] = __DIR__ . '/TwoFactorAuth.i18n.php';
 $wgSpecialPages['TwoFactorAuth'] = 'SpecialTwoFactorAuth';
 
 $wgResourceModules['ext.twofactorauth'] = array(
@@ -67,157 +67,9 @@ $wgResourceModules['ext.twofactorauth'] = array(
 	'remoteExtPath' => 'TwoFactorAuthentication',
 );
 
-$wgHooks['AbortLogin'][] = 'TwoFactorAuth_onAbortLogin';
-$wgHooks['UserLoginForm'][] = 'TwoFactorAuth_LoginForm';
-//$wgHooks['ChangePasswordForm'][] = 'TwoFactorAuth_ChangePasswordForm';
-$wgHooks['UserLoginComplete'][] = 'TwoFactorAuth_onSuccessfulLogin';
-$wgHooks['GetPreferences'][] = 'TwoFactorAuth_PreferencesForm';
-$wgHooks['LoadExtensionSchemaUpdates'][] = 'efTwoFactorAuthSchemaUpdates';
-$wgHooks['UnitTestsList'][] = 'efTwoFactorAuthRegisterUnitTests';
-
-/**
- * Modify the login form template to add a field for the TOTP.
- *
- * @param $template UserloginTemplate
- * @return bool
- */
-function TwoFactorAuth_LoginForm( &$template ) {
-	global $wgTwoFactorSeparatePages;
-
-	if( $wgTwoFactorSeparatePages ) {
-		return true;
-	}
-
-	if( isset( $template->data['extrafields'] ) ) {
-		$extrafields = $template->data['extrafields'];
-	} else {
-		$extrafields = '';
-	}
-
-	// Since it's a textbox, put it at the beginning of the extra fields.
-	$extrafields = Html::rawElement( 'tr', array(),
-		Html::rawElement( 'td', array( 'class' => 'mw-label' ),
-			Html::element( 'label', array( 'for' => 'wpTwoFactorToken' ), wfMessage( 'twofactorauth-token' ) )
-		) .
-		Html::rawElement( 'td', array( 'class' => 'mw-input' ),
-			Html::input( 'wpTwoFactorToken', null, 'password',
-				array( 'class' => 'loginPassword', 'id' => 'wpTwoFactorToken', 'tabindex' => '3', 'size' => '20' ) )
-		)
-	) . $extrafields;
-
-	$template->set( 'extrafields', $extrafields );
-	return true;
-}
-
-/**
- * Modify the change password form to add a field for the TOTP.
- *
- * @param $extraFields array
- * @return bool
- */
-function TwoFactorAuth_ChangePasswordForm( &$extraFields ) {
-	$tokenField = array( 'wpTwoFactorToken', 'twofactorauth-token', 'password', '' );
-	array_push( $extraFields, $tokenField );
-	return true;
-}
-
-/**
- * Add a complimentary link to the Preferences form that brings the
- * user to the Two Factor auth page.
- *
- * @param $user Current user
- * @param &$preferences Array of preferences
- * @return bool
- */
-function TwoFactorAuth_PreferencesForm( $user, &$preferences ) {
-	$link = Linker::link(
-		SpecialPage::getTitleFor( 'TwoFactorAuth' ),
-		wfMessage( 'twofactorauth-enabledisable' )->escaped()
-	);
-
-	$preferences['twofactorauth'] = array(
-		'type' => 'info',
-		'raw' => true,
-		'default' => $link,
-		'label-message' => 'twofactorauth',
-		'section' => 'personal/info'
-	);
-
-	return true;
-}
-
-/**
- * Check if the token in this request is valid for the given user. If not, treat
- * it as an incorrect password and return false to LoginForm.
- *
- * @param $username User object
- * @param $password string
- * @param $result bool
- * @return bool
- */
-function TwoFactorAuth_onAbortLogin( User $user, $password, &$result ) {
-	global $wgTwoFactorSeparatePages;
-
-	$context = RequestContext::getMain();
-	$authuser = new TwoFactorAuthUser( $user );
-	if ( !$authuser->loadFromDatabase() ) {
-		return true;
-	}
-
-	if ( $wgTwoFactorSeparatePages && $context->getTitle()->equals( SpecialPage::getTitleFor( 'Userlogin' ) ) ) {
-		$authuser->saveToSession();
-		$context->getRequest()->setSessionData( 'wsLoginRequest', $context->getRequest() );
-		$context->getOutput()->redirect(
-			SpecialPage::getTitleFor( 'TwoFactorAuth', 'auth' )
-			->getFullURL( '', false, PROTO_CURRENT )
-		);
-		return false;
-	} elseif( !$authuser->verifyToken( $context->getRequest()->getText( 'wpTwoFactorToken' ) ) ) {
-		$result = LoginForm::WRONG_PLUGIN_PASS;
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * If the user doesn't have that many backup tokens left, leave a warning with
- * a link.
- *
- * @param User &$currentUser
- * @param &$injected_html
- * @return bool
- */
-function TwoFactorAuth_onSuccessfulLogin( User &$currentUser, &$injected_html ) {
-	$authuser = new TwoFactorAuthUser( $currentUser );
-	if( $authuser->loadFromDatabase() && count( $authuser->getScratchTokens() ) <= 1 ) {
-		$title = SpecialPage::getTitleFor( 'TwoFactorAuth' );
-		$link = Linker::link( $title, wfMessage( 'twofactorauth-scratchwarning-link' ) );
-		$injected_html = wfMessage( 'twofactorauth-scratchwarning-text', $link )->plain();
-	}
-	return true;
-}
-/**
- * @param $updater DatabaseUpdater
- * @return bool
- */
-function efTwoFactorAuthSchemaUpdates( $updater ) {
-	$base = dirname( __FILE__ );
-	switch ( $updater->getDB()->getType() ) {
-	case 'mysql':
-		$updater->addExtensionTable( 'twofactorauth', "$base/twofactorauth.sql" );
-		break;
-	}
-	return true;
-}
-
-/**
- * Add unit tests.
- * @param &$files List of unit test files
- * @return bool
- */
-function efTwoFactorAuthRegisterUnitTests( &$files ) {
-	$testDir = dirname( __FILE__ ) . '/tests/';
-	$files[] = $testDir . 'TwoFactorUserTest.php';
-	return true;
-}
+Hooks::register( 'AbortLogin', 'TwoFactorAuthHooks::onAbortLogin' );
+Hooks::register( 'UserLoginForm', 'TwoFactorAuthHooks::onUserLoginForm' );
+Hooks::register( 'UserLoginComplete', 'TwoFactorAuthHooks::onUserLoginComplete' );
+Hooks::register( 'GetPreferences', 'TwoFactorAuthHooks::onGetPreferences' );
+Hooks::register( 'LoadExtensionSchemaUpdates', 'TwoFactorAuthHooks::onLoadExtensionSchemaUpdates' );
+Hooks::register( 'UnitTestsList', 'TwoFactorAuthHooks::onUnitTestsList' );
