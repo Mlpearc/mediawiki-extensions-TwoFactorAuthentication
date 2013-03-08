@@ -92,10 +92,13 @@ $messages['be-tarask'] = array(
 );
 
 /** Breton (brezhoneg)
+ * @author Fohanno
  * @author Y-M D
  */
 $messages['br'] = array(
+	'twofactorauth-token' => 'Jedouer',
 	'twofactoruath-enable' => 'Gweredekaat',
+	'twofactorauth-disable' => 'Diweredekaat',
 );
 
 /** Czech (česky)
