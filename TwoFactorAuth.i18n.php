@@ -51,9 +51,11 @@ $messages['en'] = array(
  */
 $messages['qqq'] = array(
 	'twofactorauth-desc' => '{{desc|name=Two Factor Authentication|url=http://www.mediawiki.org/wiki/Extension:TwoFactorAuthentication}}',
-	'twofactorauth' => 'Extension name, found on [[Special:Version]]',
+	'twofactorauth' => 'Extension name, found on [[Special:Version]].
+{{Identical|Two factor authentication}}',
 	'twofactorauth-text' => 'Introduction and usage text on Special:TwoFactorAuth.',
-	'twofactorauth-legend' => 'HTMLForm label for the fieldset on Special:TwoFactorAuth.',
+	'twofactorauth-legend' => 'HTMLForm label for the fieldset on Special:TwoFactorAuth.
+{{Identical|Two factor authentication}}',
 	'twofactorauth-account' => 'Account name associated with two factor authentication on this wiki (username@<wiki name>) found on Special:TwoFactorAuth.',
 	'twofactorauth-secret' => 'Plain text authentication secret found on Special:TwoFactorAuth while enabling twofactor',
 	'twofactorauth-title-enable' => 'Page title on Special:TwoFactorAuth, when enabling twofactor.',
