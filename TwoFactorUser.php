@@ -138,7 +138,15 @@ class TwoFactorAuthUser extends ContextSource {
 	 * @return bool True if verified, false if invalid
 	 */
 	public function verifyToken( $token ) {
-		global $wgTwoFactorWindowSize, $wgTwoFactorWindowLeniency;
+		global $wgMemc, $wgTwoFactorWindowSize, $wgTwoFactorWindowLeniency;
+
+		$memcKey = wfMemcKey( 'twofactorauth', 'lasttoken', $this->user->getId() );
+		$lastTokens = $wgMemc->get( $memcKey );
+		if ( in_array( $token, $lastTokens ) ) {
+			// Token was already used recently.
+			return false;
+		}
+
 		$results = HOTP::generateByTimeWindow(
 			Base32::decode( $this->secret ),
 			$wgTwoFactorWindowSize,
@@ -150,6 +158,10 @@ class TwoFactorAuthUser extends ContextSource {
 		// for the time window.
 		foreach( $results as $result ) {
 			if( $result->toHOTP( 6 ) === $token ) {
+				array_unshift( $lastTokens, $token );
+				// Keep the lastTokens array trimmed to the number of tokens accepted (due to leniency)
+				array_splice( $lastTokens, $wgTwoFactorWindowLeniency * 2 );
+				$wgMemc->set( $memcKey, $lastTokens, 2 * $wgTwoFactorLeniency * $wgTwoFactorWindowSize );
 				return true;
 			}
 		}
