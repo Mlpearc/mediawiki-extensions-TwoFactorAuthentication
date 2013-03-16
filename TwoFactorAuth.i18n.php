@@ -271,6 +271,7 @@ $messages['hsb'] = array(
 	'twofactorauth-title-enable' => 'Dwufaktorowu awtentifikaciju zmóžnić',
 	'twofactorauth-title-disable' => 'Dwufaktorowu awtentifikaciju znjemóžnić',
 	'twofactorauth-title-reset' => 'Dwufaktorowu awtentifikaciju wróćo stajić',
+	'twofactorauth-title-auth' => 'Z dwufaktorowej awtentifikaciju so přizjewić',
 	'twofactorauth-enabledisable' => 'Dwufaktorowu awtentifikaciju zmóžnić/znjemóžnić',
 	'twofactorauth-token' => 'Token',
 	'twofactorauth-qrcode' => 'QR-kodowe potajnstwo',
@@ -280,6 +281,7 @@ $messages['hsb'] = array(
 	'twofactorauth-success-disable' => 'Dwukročelowe přepruwowanje wuspěšnje znjemóžnjene.',
 	'twofactorauth-enable' => 'Zmóžnić',
 	'twofactorauth-disable' => 'Znjemóžnić',
+	'twofactorauth-auth' => 'Přizjewić',
 	'twofactorauth-resetscratchtokens' => 'Zawěsćenske tokeny wróćo stajić',
 	'twofactorauth-scratchwarning-link' => 'swoje zawěsćenske tokeny wróćo stajiš',
 	'twofactorauth-scratchwarning-text' => '<b>Warnowanje!</b> Ličba zawěsćenskich tokenow, kotrež maš za dwufaktorowe awtentifikaciju dźe na kónc. Poruča so, zo bórze $1.',
@@ -561,10 +563,12 @@ $messages['zh-hans'] = array(
 	'twofactorauth-title-enable' => '启用双因素身份验证',
 	'twofactorauth-title-disable' => '禁用双因素身份验证',
 	'twofactorauth-title-reset' => '重置双因素身份验证',
+	'twofactorauth-title-auth' => '用双因素身份验证登录',
 	'twofactorauth-enabledisable' => '启用/禁用双因素身份验证',
 	'twofactorauth-token' => '令牌',
 	'twofactorauth-enable' => '启用',
 	'twofactorauth-disable' => '禁用',
+	'twofactorauth-auth' => '登录',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
