@@ -205,6 +205,7 @@ $messages['fr'] = array(
 	'twofactorauth-title-enable' => "Activer l'authentification à deux facteurs",
 	'twofactorauth-title-disable' => "Désactiver l'authentification à deux facteurs",
 	'twofactorauth-title-reset' => "Réinitialiser l'authentification à deux facteurs",
+	'twofactorauth-title-auth' => 'Connexion avec authentification à deux facteurs',
 	'twofactorauth-enabledisable' => "Activer/Désactiver l'authentification à deux facteurs",
 	'twofactorauth-token' => 'Jeton',
 	'twofactorauth-qrcode' => 'Code secret QR',
@@ -214,6 +215,7 @@ $messages['fr'] = array(
 	'twofactorauth-success-disable' => 'Vérification à deux étapes bien désactivée.',
 	'twofactorauth-enable' => 'Activé',
 	'twofactorauth-disable' => 'Désactivé',
+	'twofactorauth-auth' => 'Connexion',
 	'twofactorauth-resetscratchtokens' => 'Réinitialiser les jetons enregistrés',
 	'twofactorauth-scratchwarning-link' => 'réinitialiser vos jetons enregistrés',
 	'twofactorauth-scratchwarning-text' => "<b>Attention!</b> Le nombre de jetons enregistrés que vous avez pour l'authentification à deux facteurs diminue. Vous devriez $1 rapidement.",
@@ -380,6 +382,7 @@ $messages['mk'] = array(
 	'twofactorauth-title-enable' => 'Овозможи двофакторска заверка',
 	'twofactorauth-title-disable' => 'Оневозможи двофакторска заверка',
 	'twofactorauth-title-reset' => 'Презадај ја двофакторската заверка',
+	'twofactorauth-title-auth' => 'Најава со двофакторска заверка',
 	'twofactorauth-enabledisable' => 'Овозможи/оневозможи двофакторска заверка',
 	'twofactorauth-token' => 'Жетон',
 	'twofactorauth-qrcode' => 'Тајна на QR-код',
@@ -389,12 +392,14 @@ $messages['mk'] = array(
 	'twofactorauth-success-disable' => 'Двофакторската заверка е успешно оневозможена.',
 	'twofactorauth-enable' => 'Овозможи',
 	'twofactorauth-disable' => 'Оневозможи',
+	'twofactorauth-auth' => 'Најава',
 	'twofactorauth-resetscratchtokens' => 'Презадавање на резервни жетони',
 	'twofactorauth-scratchwarning-link' => 'презададете резервни жетони',
 	'twofactorauth-scratchwarning-text' => '<b>Предупредување!</b> Резервните жетони за Двофакторската заверка ви се при прај. Се препорачува наскоро да $1.',
 );
 
 /** Dutch (Nederlands)
+ * @author Konovalov
  * @author Siebrand
  */
 $messages['nl'] = array(
@@ -407,6 +412,7 @@ $messages['nl'] = array(
 	'twofactorauth-title-enable' => 'Twee-factor authenticatie inschakelen',
 	'twofactorauth-title-disable' => 'Twee-factor authenticatie uitschakelen',
 	'twofactorauth-title-reset' => 'Twee-factor authenticatie opnieuw instellen',
+	'twofactorauth-title-auth' => 'Aanmelden met twee-factor authentificatie',
 	'twofactorauth-enabledisable' => 'Twee-factor authenticatie in- of uitschakelen',
 	'twofactorauth-token' => 'Token',
 	'twofactorauth-qrcode' => 'QR Codegeheim',
@@ -416,6 +422,7 @@ $messages['nl'] = array(
 	'twofactorauth-success-disable' => 'Twee-factorverificatie is uitgeschakeld.',
 	'twofactorauth-enable' => 'Inschakelen',
 	'twofactorauth-disable' => 'Uitschakelen',
+	'twofactorauth-auth' => 'Aanmelden',
 	'twofactorauth-resetscratchtokens' => 'Back-uptokens opnieuw instellen',
 	'twofactorauth-scratchwarning-link' => 'back-uptokens opnieuw instellen',
 	'twofactorauth-scratchwarning-text' => '<b>Waarschuwing:</b> het aantal back-uptokens dat u voor twee-factorverificatie hebt is bijna op. U moet snel uw $1.',
