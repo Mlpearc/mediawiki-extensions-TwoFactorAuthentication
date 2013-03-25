@@ -464,6 +464,17 @@ $messages['ps'] = array(
 	'twofactorauth-disable' => 'ناچارنول',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'twofactorauth' => 'Autendicazione a Doje Fatture',
+	'twofactorauth-legend' => 'Autendicazione a Doje Fatture',
+	'twofactorauth-enable' => 'Abbilite',
+	'twofactorauth-disable' => 'Disabbilite',
+	'twofactorauth-auth' => 'Tràse',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
