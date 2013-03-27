@@ -53,15 +53,23 @@ $messages['en'] = array(
  */
 $messages['qqq'] = array(
 	'twofactorauth-desc' => '{{desc|name=Two Factor Authentication|url=http://www.mediawiki.org/wiki/Extension:TwoFactorAuthentication}}',
-	'twofactorauth' => 'Extension name, found on [[Special:Version]].
+	'twofactorauth' => 'Used as label in [[Special:Preferences]].
 {{Identical|Two factor authentication}}',
 	'twofactorauth-text' => 'Introduction and usage text on Special:TwoFactorAuth.',
 	'twofactorauth-legend' => 'HTMLForm label for the fieldset on Special:TwoFactorAuth.
 {{Identical|Two factor authentication}}',
 	'twofactorauth-account' => 'Account name associated with two factor authentication on this wiki (username@<wiki name>) found on Special:TwoFactorAuth.',
 	'twofactorauth-secret' => 'Plain text authentication secret found on Special:TwoFactorAuth while enabling twofactor',
-	'twofactorauth-title-enable' => 'Page title on Special:TwoFactorAuth, when enabling twofactor.',
-	'twofactorauth-title-disable' => 'Page title on Special:TwoFactorAuth while disabling twofactor.',
+	'twofactorauth-title-enable' => '{{doc-special|TwoFactorAuth}}
+Used while enabling twofactor.
+
+See also:
+* {{msg-mw|Twofactorauth-title-disable}}',
+	'twofactorauth-title-disable' => '{{doc-special|TwoFactorAuth}}
+Used while disabling twofactor.
+
+See also:
+* {{msg-mw|Twofactorauth-title-enable}}',
 	'twofactorauth-title-reset' => 'Page title when resetting scratch tokens',
 	'twofactorauth-title-auth' => 'Page title when the user is logging in and needs to authenticate with a token',
 	'twofactorauth-enabledisable' => 'Label for the link to Special:TwoFactorAuth from [[Special:Preferences]].',
@@ -154,6 +162,13 @@ $messages['de-formal'] = array(
 	'twofactorauth-text' => 'Dies ermöglicht Ihnen die Aktivierung oder Deaktivierung der Zwei-Faktor-Authentifizierung. Falls Sie die Zwei-Faktor-Authentifizierung aktivieren, scannen Sie den unten angegebenen QR-Code mit Ihrem Gerät oder geben Sie das Geheimnis manuell ein. Geben Sie danach ein Token zur Verifizierung in das Feld ein. Falls Sie die Zwei-Faktor-Authentifizierung deaktivieren, geben Sie ein Token zur Verifizierung und Deaktivierung in das Feld ein.',
 	'twofactorauth-scratchwarning-link' => 'Setzen Sie Ihre Sicherungstoken zurück',
 	'twofactorauth-scratchwarning-text' => '<b>Achtung!</b> Ihre Sicherungstoken für die Zwei-Faktor-Authentifizierung gehen zu Neige. Es wird $1 empfohlen.',
+);
+
+/** Zazaki (Zazaki)
+ * @author Mirzali
+ */
+$messages['diq'] = array(
+	'twofactorauth-auth' => 'Cıkewtış',
 );
 
 /** Spanish (español)
