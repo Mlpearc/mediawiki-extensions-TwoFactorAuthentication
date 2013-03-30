@@ -599,9 +599,15 @@ $messages['zh-hans'] = array(
 	'twofactorauth-title-auth' => '用双因素身份验证登录',
 	'twofactorauth-enabledisable' => '启用/禁用双因素身份验证',
 	'twofactorauth-token' => '令牌',
+	'twofactorauth-scratch' => '备份令牌',
+	'twofactorauth-authfailed' => '验证双因素凭据失败',
+	'twofactorauth-success-enable' => '两步验证已成功启用。',
+	'twofactorauth-success-disable' => '两步验证已成功停用。',
 	'twofactorauth-enable' => '启用',
 	'twofactorauth-disable' => '禁用',
 	'twofactorauth-auth' => '登录',
+	'twofactorauth-resetscratchtokens' => '重置备份令牌',
+	'twofactorauth-scratchwarning-link' => '重置您备份的令牌',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
