@@ -3,7 +3,7 @@
 /**
  * TwoFactorAuth extension - Support for TOTP two-factor authentication
  *
- * For more info see http://mediawiki.org/wiki/Extension:TwoFactorAuth
+ * For more info see https://mediawiki.org/wiki/Extension:TwoFactorAuthentication
  *
  * @file
  * @ingroup Extensions

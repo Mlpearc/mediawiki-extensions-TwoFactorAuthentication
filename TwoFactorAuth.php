@@ -2,7 +2,7 @@
 /**
  * TwoFactorAuth extension - Support for TOTP two-factor authentication
  *
- * For more info see http://mediawiki.org/wiki/Extension:TwoFactorAuth
+ * For more info see https://mediawiki.org/wiki/Extension:TwoFactorAuthentication
  *
  * @file
  * @ingroup Extensions
@@ -22,7 +22,7 @@ $wgExtensionCredits['other'][] = array(
 	'name' => 'TwoFactorAuth',
 	'author' => 'Tyler Romeo',
 	'version' => '0.2',
-	'url' => 'http://mediawiki.org/wiki/Extension:TwoFactorAuth',
+	'url' => 'https://mediawiki.org/wiki/Extension:TwoFactorAuthentication',
 	'descriptionmsg' => 'twofactorauth-desc',
 );
 
