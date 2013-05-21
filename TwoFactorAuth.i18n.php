@@ -99,6 +99,35 @@ $messages['ar'] = array(
 	'twofactorauth-disable' => 'عطّل',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'twofactorauth-desc' => "Proporciona soporte d'identificación utilizando contraseñes pa una sola vez basaes en HMAC",
+	'twofactorauth' => 'Autenticación de dos factores',
+	'twofactorauth-text' => "Esto permite-y activar o desactivar la autenticación de dos factores. Si ta activando la autenticación de dos factores, escanee'l códigu QR d'abaxo (o escriba a mano'l númberu secretu) nel so preséu. Darréu escriba un pase nel campu pa comprobación. Si ta desactivando la autenticación de dos factores, escriba un pase nel campu pa comprobar y desactivar.",
+	'twofactorauth-legend' => 'Autenticación de dos factores',
+	'twofactorauth-account' => 'Nome de la cuenta de dos factores:',
+	'twofactorauth-secret' => 'Clave secreta de dos factores:',
+	'twofactorauth-title-enable' => 'Activar la autenticación de dos factores',
+	'twofactorauth-title-disable' => 'Desactivar la autenticación de dos factores',
+	'twofactorauth-title-reset' => 'Reaniciar la autenticación de dos factores',
+	'twofactorauth-title-auth' => 'Aniciar sesión cola autenticación de dos factores',
+	'twofactorauth-enabledisable' => 'Activar/Desactivar la autenticación de dos factores',
+	'twofactorauth-token' => 'Pase',
+	'twofactorauth-qrcode' => 'Códigu QR secretu',
+	'twofactorauth-scratch' => 'Copies de seguridá de pases',
+	'twofactorauth-authfailed' => 'Nun pudieron validase les credenciales de dos factores',
+	'twofactorauth-success-enable' => 'La comprobación en dos pasos activóse correutamente.',
+	'twofactorauth-success-disable' => 'La comprobación en dos pasos desactivóse correutamente.',
+	'twofactorauth-enable' => 'Activar',
+	'twofactorauth-disable' => 'Desactivar',
+	'twofactorauth-auth' => 'Aniciar sesión',
+	'twofactorauth-resetscratchtokens' => 'Reaniciar les copies de seguridá de pases',
+	'twofactorauth-scratchwarning-link' => 'reanicie les copies de seguridá de pases',
+	'twofactorauth-scratchwarning-text' => "<b>¡Atención!</b> El númberu de copies de seguridá de pases que tien pa la autenticación de dos factores ta a piques d'escosar. Encamientase que $1 ceo.",
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
