@@ -519,6 +519,25 @@ $messages['roa-tara'] = array(
 	'twofactorauth-auth' => 'Tràse',
 );
 
+/** Russian (русский)
+ * @author Putnik
+ */
+$messages['ru'] = array(
+	'twofactorauth' => 'Двухфакторная аутентификация',
+	'twofactorauth-legend' => 'Двухфакторная аутентификация',
+	'twofactorauth-title-reset' => 'Сбросить двухфакторную аутентификацию',
+	'twofactorauth-title-auth' => 'Логин с двухфакторной аутентификацией',
+	'twofactorauth-enabledisable' => 'Включить/выключить двухфакторную аутентификацию',
+	'twofactorauth-token' => 'Токен',
+	'twofactorauth-qrcode' => 'Секретный QR-код',
+	'twofactorauth-scratch' => 'Резервные токены',
+	'twofactorauth-enable' => 'Включить',
+	'twofactorauth-disable' => 'Выключить',
+	'twofactorauth-auth' => 'Вход',
+	'twofactorauth-resetscratchtokens' => 'Сбросить резервные токены',
+	'twofactorauth-scratchwarning-link' => 'сброс ваших резервных токенов',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
