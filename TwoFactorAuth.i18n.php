@@ -562,11 +562,13 @@ $messages['si'] = array(
 );
 
 /** Swedish (svenska)
+ * @author Jopparn
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'twofactorauth-enable' => 'Aktivera',
 	'twofactorauth-disable' => 'Inaktivera',
+	'twofactorauth-auth' => 'Logga in',
 );
 
 /** Tamil (தமிழ்)
