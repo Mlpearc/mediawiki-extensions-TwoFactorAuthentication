@@ -73,7 +73,8 @@ See also:
 	'twofactorauth-title-reset' => 'Page title when resetting scratch tokens',
 	'twofactorauth-title-auth' => 'Page title when the user is logging in and needs to authenticate with a token',
 	'twofactorauth-enabledisable' => 'Label for the link to Special:TwoFactorAuth from [[Special:Preferences]].',
-	'twofactorauth-token' => 'HTMLForm label, found on Special:TwoFactorAuth, when verifying twofactor.',
+	'twofactorauth-token' => 'HTMLForm label, found on [[Special:TwoFactorAuth]], when verifying twofactor.
+{{Identical|Token}}',
 	'twofactorauth-qrcode' => 'HTMLForm label, found on Special:TwoFactorAuth, for the QR code secret.',
 	'twofactorauth-scratch' => 'HTMLForm label, found on Special:TwoFactorAuth, for the backup codes.',
 	'twofactorauth-authfailed' => 'Plain text, found on Special:TwoFactorAuth when failing to enable twofactor.',
