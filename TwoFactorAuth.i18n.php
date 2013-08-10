@@ -607,7 +607,9 @@ $messages['tl'] = array(
 );
 
 /** Ukrainian (українська)
+ * @author Andriykopanytsia
  * @author Steve.rusyn
+ * @author SteveR
  * @author Ата
  */
 $messages['uk'] = array(
@@ -620,6 +622,7 @@ $messages['uk'] = array(
 	'twofactorauth-title-enable' => 'Увімкнути Two Factor Authentication',
 	'twofactorauth-title-disable' => 'Вимкнути Two Factor Authentication',
 	'twofactorauth-title-reset' => 'Скинути Two Factor Authentication',
+	'twofactorauth-title-auth' => 'Вхід з двоетапною авторизацією',
 	'twofactorauth-enabledisable' => 'Увімкнути/Вимкнути Two Factor Authentication',
 	'twofactorauth-token' => 'Маркер',
 	'twofactorauth-qrcode' => 'QR-код секрет',
@@ -629,6 +632,7 @@ $messages['uk'] = array(
 	'twofactorauth-success-disable' => 'Двокрокова верифікація успішно вимкнена.',
 	'twofactorauth-enable' => 'Увімкнути',
 	'twofactorauth-disable' => 'Вимкнути',
+	'twofactorauth-auth' => 'Вхід',
 	'twofactorauth-resetscratchtokens' => 'Скиданути резервне копіювання маркерів',
 	'twofactorauth-scratchwarning-link' => 'скидання резервного копіювання маркерів',
 	'twofactorauth-scratchwarning-text' => '<b>Увага!</b> Кількість резервних маркерів, які у Вас є для двофакторної автентифікації, недостатня. Вас рекомендується $1 найближчим часом.',
