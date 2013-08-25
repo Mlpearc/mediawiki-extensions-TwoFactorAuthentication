@@ -509,6 +509,14 @@ $messages['ps'] = array(
 	'twofactorauth-disable' => 'ناچارنول',
 );
 
+/** Brazilian Portuguese (português do Brasil)
+ * @author Luckas
+ */
+$messages['pt-br'] = array(
+	'twofactorauth-enable' => 'Ativar',
+	'twofactorauth-disable' => 'Desativar',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
