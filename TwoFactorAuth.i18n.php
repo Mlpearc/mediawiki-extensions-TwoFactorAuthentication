@@ -85,7 +85,9 @@ See also:
 	'twofactorauth-auth' => 'Label for submit button to log in with two-factor auth.
 {{Identical|Log in}}',
 	'twofactorauth-resetscratchtokens' => 'Label for submit button to reset scratch tokens',
-	'twofactorauth-scratchwarning-link' => 'Text for the link to Special:TwoFactorAuth when warning the user about backup tokens. It is used as parameter $1 in {{msg-mw|Twofactorauth-scratchwarning-text}}.',
+	'twofactorauth-scratchwarning-link' => 'Text for the link to [[Special:TwoFactorAuth]] when warning the user about backup tokens.
+
+Used as <code>$1</code> in {{msg-mw|Twofactorauth-scratchwarning-text}}.',
 	'twofactorauth-scratchwarning-text' => 'This message is a warning and the first parameter is the link to the special page. Parameters:
 * $1 - defined as {{msg-mw|twofactorauth-scratchwarning-link}}',
 );
