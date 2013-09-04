@@ -337,7 +337,9 @@ $messages['hsb'] = array(
 );
 
 /** Italian (italiano)
+ * @author Beta16
  * @author Darth Kule
+ * @author Gianfranco
  */
 $messages['it'] = array(
 	'twofactorauth-desc' => "Fornisce supporto per l'autenticazione utilizzando password a uso singolo basate su HMAC",
@@ -349,6 +351,7 @@ $messages['it'] = array(
 	'twofactorauth-title-enable' => 'Abilita autenticazione a due fattori',
 	'twofactorauth-title-disable' => 'Disabilita autenticazione a due fattori',
 	'twofactorauth-title-reset' => "Reimpostare l'autenticazione a due fattori",
+	'twofactorauth-title-auth' => 'Accesso con autenticazione a due fattori',
 	'twofactorauth-enabledisable' => "Abilita/disabilita l'autenticazione a due fattori",
 	'twofactorauth-token' => 'Token',
 	'twofactorauth-qrcode' => 'Codice QR segreto',
@@ -358,6 +361,7 @@ $messages['it'] = array(
 	'twofactorauth-success-disable' => 'Verifica in due passaggi correttamente disabilitata.',
 	'twofactorauth-enable' => 'Abilita',
 	'twofactorauth-disable' => 'Disabilita',
+	'twofactorauth-auth' => 'Entra',
 	'twofactorauth-resetscratchtokens' => 'Ripristino token di backup',
 	'twofactorauth-scratchwarning-link' => 'ripristinare i propri token di backup',
 	'twofactorauth-scratchwarning-text' => "<b>Attenzione:</b> il numero di token di backup per l'autenticazione a due fattori è in esaurimento. Si consiglia di $1 al più presto.",
