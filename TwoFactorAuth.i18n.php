@@ -535,17 +535,22 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (русский)
+ * @author Okras
  * @author Putnik
  */
 $messages['ru'] = array(
 	'twofactorauth' => 'Двухфакторная аутентификация',
 	'twofactorauth-legend' => 'Двухфакторная аутентификация',
+	'twofactorauth-title-enable' => 'Включить двухфакторную аутентификацию',
+	'twofactorauth-title-disable' => 'Отключить двухфакторную аутентификацию',
 	'twofactorauth-title-reset' => 'Сбросить двухфакторную аутентификацию',
 	'twofactorauth-title-auth' => 'Логин с двухфакторной аутентификацией',
 	'twofactorauth-enabledisable' => 'Включить/выключить двухфакторную аутентификацию',
 	'twofactorauth-token' => 'Токен',
 	'twofactorauth-qrcode' => 'Секретный QR-код',
 	'twofactorauth-scratch' => 'Резервные токены',
+	'twofactorauth-success-enable' => 'Двухэтапная верификация успешно включена.',
+	'twofactorauth-success-disable' => 'Двухэтапная верификация успешно отключена.',
 	'twofactorauth-enable' => 'Включить',
 	'twofactorauth-disable' => 'Выключить',
 	'twofactorauth-auth' => 'Вход',
