@@ -539,8 +539,12 @@ $messages['roa-tara'] = array(
  * @author Putnik
  */
 $messages['ru'] = array(
+	'twofactorauth-desc' => 'Обеспечивает поддержку проверки подлинности с помощью HMAC на основе одноразовых паролей',
 	'twofactorauth' => 'Двухфакторная аутентификация',
+	'twofactorauth-text' => 'Позволяет включить или отключить двухфакторную проверку подлинности. Если вы включаете её, сосканируйте QR-код, представленный ниже (или вручную введите секрет) в ваше устройство. Затем введите токен в поле проверки. Если вы отключаете двухфакторную проверку подлинности, введите токен в поле для проверки и отключите её.',
 	'twofactorauth-legend' => 'Двухфакторная аутентификация',
+	'twofactorauth-account' => 'Двухфакторное имя учётной записи:',
+	'twofactorauth-secret' => 'Двухфакторный секретный ключ:',
 	'twofactorauth-title-enable' => 'Включить двухфакторную аутентификацию',
 	'twofactorauth-title-disable' => 'Отключить двухфакторную аутентификацию',
 	'twofactorauth-title-reset' => 'Сбросить двухфакторную аутентификацию',
@@ -549,13 +553,16 @@ $messages['ru'] = array(
 	'twofactorauth-token' => 'Токен',
 	'twofactorauth-qrcode' => 'Секретный QR-код',
 	'twofactorauth-scratch' => 'Резервные токены',
+	'twofactorauth-authfailed' => 'Не удалось проверить двухфакторные учётные данные',
 	'twofactorauth-success-enable' => 'Двухэтапная верификация успешно включена.',
 	'twofactorauth-success-disable' => 'Двухэтапная верификация успешно отключена.',
 	'twofactorauth-enable' => 'Включить',
 	'twofactorauth-disable' => 'Выключить',
 	'twofactorauth-auth' => 'Вход',
 	'twofactorauth-resetscratchtokens' => 'Сбросить резервные токены',
-	'twofactorauth-scratchwarning-link' => 'сброс ваших резервных токенов',
+	'twofactorauth-scratchwarning-link' => 'сбросить ваши резервные токены',
+	'twofactorauth-scratchwarning-text' => '<b>Внимание!</b> Количество имеющихся у вас резервных токенов
+заканчивается. Мы рекомендуем вам $1 в ближайшее время.',
 );
 
 /** Sinhala (සිංහල)
