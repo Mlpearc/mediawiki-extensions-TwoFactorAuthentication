@@ -149,6 +149,14 @@ $messages['br'] = array(
 	'twofactorauth-disable' => 'Diweredekaat',
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'twofactorauth-resetscratchtokens' => 'Резервни токенаш кхоссар',
+	'twofactorauth-scratchwarning-link' => 'хьан резервни токенаш кхоссар',
+);
+
 /** Czech (česky)
  * @author Vks
  */
