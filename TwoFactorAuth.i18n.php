@@ -673,6 +673,7 @@ $messages['uk'] = array(
 );
 
 /** Simplified Chinese (中文（简体）‎)
+ * @author Liuxinyu970226
  * @author Shirayuki
  * @author Yfdyh000
  */
@@ -688,6 +689,7 @@ $messages['zh-hans'] = array(
 	'twofactorauth-title-auth' => '用双因素身份验证登录',
 	'twofactorauth-enabledisable' => '启用/禁用双因素身份验证',
 	'twofactorauth-token' => '令牌',
+	'twofactorauth-qrcode' => '二维码保密',
 	'twofactorauth-scratch' => '备份令牌',
 	'twofactorauth-authfailed' => '验证双因素凭据失败',
 	'twofactorauth-success-enable' => '两步验证已成功启用。',
@@ -697,6 +699,7 @@ $messages['zh-hans'] = array(
 	'twofactorauth-auth' => '登录',
 	'twofactorauth-resetscratchtokens' => '重置备份令牌',
 	'twofactorauth-scratchwarning-link' => '重置您备份的令牌',
+	'twofactorauth-scratchwarning-text' => '<b>警告！</b>您所备份的双因素身份认证令牌已殆尽。我们强烈建议您点击$1立刻更换。',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
