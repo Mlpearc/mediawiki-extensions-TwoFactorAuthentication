@@ -601,6 +601,7 @@ $messages['si'] = array(
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
+	'twofactorauth-token' => 'Token',
 	'twofactorauth-enable' => 'Aktivera',
 	'twofactorauth-disable' => 'Inaktivera',
 	'twofactorauth-auth' => 'Logga in',
