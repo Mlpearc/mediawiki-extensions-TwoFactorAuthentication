@@ -80,8 +80,10 @@ See also:
 	'twofactorauth-authfailed' => 'Plain text, found on Special:TwoFactorAuth when failing to enable twofactor.',
 	'twofactorauth-success-enable' => 'Success message after enabling two-factor authentication.',
 	'twofactorauth-success-disable' => 'Success message after disabling two-factor authentication.',
-	'twofactorauth-enable' => 'Label for submit button to enable two-factor auth',
-	'twofactorauth-disable' => 'Label for submit button to disable two-factor auth',
+	'twofactorauth-enable' => 'Label for submit button to enable two-factor auth.
+{{Identical|Enable}}',
+	'twofactorauth-disable' => 'Label for submit button to disable two-factor auth.
+{{Identical|Disable}}',
 	'twofactorauth-auth' => 'Label for submit button to log in with two-factor auth.
 {{Identical|Log in}}',
 	'twofactorauth-resetscratchtokens' => 'Label for submit button to reset scratch tokens',
