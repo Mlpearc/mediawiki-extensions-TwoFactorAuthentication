@@ -678,6 +678,7 @@ $messages['uk'] = array(
 /** Simplified Chinese (中文（简体）‎)
  * @author Liuxinyu970226
  * @author Shirayuki
+ * @author Xiaomingyan
  * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
@@ -691,7 +692,7 @@ $messages['zh-hans'] = array(
 	'twofactorauth-title-reset' => '重置双因素身份验证',
 	'twofactorauth-title-auth' => '用双因素身份验证登录',
 	'twofactorauth-enabledisable' => '启用/禁用双因素身份验证',
-	'twofactorauth-token' => '令牌',
+	'twofactorauth-token' => '密钥',
 	'twofactorauth-qrcode' => '二维码保密',
 	'twofactorauth-scratch' => '备份令牌',
 	'twofactorauth-authfailed' => '验证双因素凭据失败',
