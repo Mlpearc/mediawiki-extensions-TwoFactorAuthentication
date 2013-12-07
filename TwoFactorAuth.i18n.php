@@ -159,7 +159,7 @@ $messages['ce'] = array(
 	'twofactorauth-scratchwarning-link' => 'хьан резервни токенаш кхоссар',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Vks
  */
 $messages['cs'] = array(
