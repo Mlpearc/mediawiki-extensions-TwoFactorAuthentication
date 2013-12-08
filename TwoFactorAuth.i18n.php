@@ -426,8 +426,18 @@ $messages['ksh'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'twofactorauth' => 'Authentifikatioun mat zwee Elementer',
+	'twofactorauth-legend' => 'Authentifikatioun mat zwee Elementer',
+	'twofactorauth-account' => 'Numm vum Benotzerkont mat zwee Elementer:',
+	'twofactorauth-title-enable' => 'Authentifikatioun mat zwee Elementer aschalten',
+	'twofactorauth-title-disable' => 'Authentifikatioun mat zwee Elementer ausschalten',
+	'twofactorauth-title-reset' => 'Authentifikatioun mat zwee Elementer zrécksetzen',
+	'twofactorauth-title-auth' => 'Alogge mat enger Authentifikatioun mat zwee Elementer',
+	'twofactorauth-token' => 'Token',
+	'twofactorauth-qrcode' => 'QR Geheimcode',
 	'twofactorauth-enable' => 'Aschalten',
 	'twofactorauth-disable' => 'Ausschalten',
+	'twofactorauth-auth' => 'Aloggen',
 );
 
 /** Macedonian (македонски)
