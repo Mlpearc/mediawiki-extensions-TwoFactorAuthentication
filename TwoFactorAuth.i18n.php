@@ -694,6 +694,7 @@ $messages['uk'] = array(
 $messages['zh-hans'] = array(
 	'twofactorauth-desc' => '提供使用基于HMAC的一次性密码的身份验证支持',
 	'twofactorauth' => '双因素身份验证',
+	'twofactorauth-text' => '这允许您启用或禁用双因素验证。如果您要启用了双因素身份验证，扫描下面的QR码（或者手动输入密钥）到您的设备。以后输入一个令牌来验证。如果要禁用双因素验证，输入令牌验证和禁用。',
 	'twofactorauth-legend' => '双因素身份验证',
 	'twofactorauth-account' => '双因素帐户名：',
 	'twofactorauth-secret' => '双因素机密密钥：',
