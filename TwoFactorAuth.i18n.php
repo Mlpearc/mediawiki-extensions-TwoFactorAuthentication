@@ -155,6 +155,7 @@ $messages['br'] = array(
  * @author Умар
  */
 $messages['ce'] = array(
+	'twofactorauth-enable' => 'Юкъадаладе',
 	'twofactorauth-resetscratchtokens' => 'Резервни токенаш кхоссар',
 	'twofactorauth-scratchwarning-link' => 'хьан резервни токенаш кхоссар',
 );
