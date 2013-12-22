@@ -165,7 +165,7 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	public function onSubmit( array $formData ) {
 		// If the action is 'auth', let LoginForm do the processing.
 		if ( $this->action !== 'auth' ) {
-			$verify = $this->TwoFactorUser->verifyToken( $formData['token'] );
+			$verify = $this->twoFactorUser->verifyToken( $formData['token'] );
 			if ( !$verify ) {
 				$this->getOutput()->addWikiMsg( 'twofactorauth-authfailed' );
 				return false;
