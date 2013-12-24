@@ -78,10 +78,10 @@ class SpecialTwoFactorAuth extends FormSpecialPage {
 	/**
 	 * Get the description for this page. Depends on the action.
 	 *
-	 * @return Message
+	 * @return String
 	 */
 	function getDescription() {
-		return $this->msg( "twofactorauth-title-{$this->action}" );
+		return $this->msg( "twofactorauth-title-{$this->action}" )->text();
 	}
 
 	/**
